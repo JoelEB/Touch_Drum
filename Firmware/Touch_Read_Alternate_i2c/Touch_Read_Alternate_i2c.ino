@@ -24,45 +24,19 @@
 *******************************************************************************/
 //These libraries are included by the Teensy Audio System Design Tool 
 #include <Audio2.h>
-//#include <Wire.h>
-#include <SPI.h>
+//#include <SPI.h>
 #include <SerialFlash.h>
-#include <Bounce.h>
-#include <TeensyView.h>
-//#include <Wire.h>
-#include <MAX17043GU.h>
-
-#define MAX17043_ADDRESS 0x36
 
 #include "note_frequency.h"
-//#include "scales.h"
 #include "TeensyAudioDesignTool.h"
 
-//Alternate (Audio)
-#define PIN_RESET 2
-#define PIN_DC    21
-#define PIN_CS    20
-#define PIN_SCK   14
-#define PIN_MOSI  7
-
-
-#define volKnob A13 //grey wire 
-#define decayKnob A12 //black wire 
-
-MAX17043GU battery;
-TeensyView oled(PIN_RESET, PIN_DC, PIN_CS, PIN_SCK, PIN_MOSI);
-
-//an array to define each of the eight touch sense pins, 
-//all other touch sense pins are used by the Teensy Audio Shield (16,17,18,19)
-//int pinTouch[] = {33,32,25,17,16,15,1,0}; //25 = white, 32 = yellow, 33 = blue
-
-int pinTouch[] = {0,1,15,16,17,25,32,33}; //25 = white, 32 = yellow, 33 = blue
+int pinTouch[] = {0,1,15,16,17,18,19,25,32,33}; //25 = white, 32 = yellow, 33 = blue
 
 int scale_index = 0;//var to keep track fo which scale is being used
 int note_index = 57;
 int octave_index = 0;
 
-int dcVal = 0;//value to control the decay of each note 
+int dcVal = 50;//value to control the decay of each note 
 int padNumber = 0;//debug for printing pad values to OLED
 
 ////////////////////CHANGE THIS WHEN ADDING MORE SCALES
@@ -72,42 +46,10 @@ int numOfScales = 10 ;//indexed at zero (subtract 1)
 
 int scale[8];
 
-
-
-//buttons for incrementing or decrementing through each scale
-Bounce button0 = Bounce(4, 15);
-Bounce button1 = Bounce(3, 15);    
-Bounce foot0 = Bounce(5, 30);
-Bounce foot1 = Bounce(8, 30);    
-
-float vol = 0;
-
-float voltage;
-float percentage;
-
-int counter = 0;
-
-bool debug = false;  
 ////////////////////////////////////////////////////////
 void setup() 
 {
-  //initialize buttons
-  pinMode(4, INPUT_PULLUP);
-  pinMode(3, INPUT_PULLUP);
-  pinMode(5, INPUT_PULLUP);
-  pinMode(8, INPUT_PULLUP);
-  button0.update();
-  button1.update();
-  foot0.update();
-  foot1.update();
-  
-  //initialize Serial
   Serial.begin(115200);
-
-  // Start I2C
-  //Wire.begin();
-  delay(100);
-  battery.restart();
   
   //set aside audio memory 
   AudioMemory(64);
@@ -139,163 +81,33 @@ void setup()
   dc7.amplitude(0);
   dc8.amplitude(0);
 
-
   //initialize volume
   sgtl5000_1.enable();
   sgtl5000_1.volume(0.8);
   sgtl5000_1.lineOutLevel(5);
-
-    //Initialize the OLED
-  oled.begin();
-  // clear(ALL) will clear out the OLED's graphic memory.
-  // clear(PAGE) will clear the Arduino's display buffer.
-  oled.clear(ALL);  // Clear the display's memory (gets rid of artifacts)
-  // To actually draw anything on the display, you must call the
-  // display() function.
-  oled.display();
-  // Give the splash screen some time to shine
-  delay(1000);
 
   changeScale();//start off at middle C
 }
 //////////////////////////////////////////////
 void loop() 
 {    
-  volumeCheck();//check the volume knob 
+  //volumeCheck();//check the volume knob 
 
   touchCheck();//check if any of the capacitive pads have been touched
 
-  dcValCheck();//check the decay knob
-
-  buttonCheck();//check for button presses to change the scale 
-
-  counter++;
-  if(counter == 10000);//don't check battery all the time, slows opperation
+  for(int i =0; i<=9; i++)
   {
-    getBattery();
-    counter = 0;
+    Serial.print("Pin");
+    Serial.print(i);
+    Serial.print(" : ");
+    Serial.print(touchRead(pinTouch[i]));  
+    Serial.print(" ");
   }
-  
-  oledPrint();//print to TeensyView
+  Serial.println();
 
-}
-void getBattery()
-{
-  // Get the values
-  voltage = battery.voltageLevel();
-  percentage = battery.fuelLevel();  
-}
-void oledPrint()
-{
-  oled.clear(PAGE);
-  
-  oled.setCursor(0, 0);
-  oled.print("Scale = ");  
+  //dcValCheck();//check the decay knob
 
-  if(note_index == 60)
-  oled.print("C ");
-  if(note_index == 61)
-  oled.print("C# ");
-  if(note_index == 62)
-  oled.print("D ");
-  if(note_index == 63)
-  oled.print("D# ");
-  if(note_index == 64)
-  oled.print("E ");
-  if(note_index == 65)
-  oled.print("F ");
-  if(note_index == 66)
-  oled.print("F# ");
-  if(note_index == 67)
-  oled.print("G ");
-  if(note_index == 68)
-  oled.print("G# ");
-  if(note_index == 57)
-  oled.print("A ");
-  if(note_index == 58)
-  oled.print("A# ");
-  if(note_index == 59)
-  oled.print("B ");
-
-  
-  if(scale_index == 0)
-  oled.print("Major");
-  if(scale_index == 1)
-  oled.print("Minor");
-  if(scale_index == 2)
-  oled.print("Akebono");
-  if(scale_index == 3)
-  oled.print("Pygmy");
-  if(scale_index == 4)
-  oled.print("Equinox");
-  if(scale_index == 5)
-  oled.print("Sapphire");
-  if(scale_index == 6)
-  oled.print("Gypsy");
-  if(scale_index == 7)
-  oled.print("SlvrSpring");
-  if(scale_index == 8)
-  oled.print("Integral");
-  if(scale_index == 9)
-  oled.print("Dorian");
-  if(scale_index == 10)
-  oled.print("GldArcadia");
-
-/*
-  if(scale_index == 22)
-  oled.print("Schumann");
-  if(scale_index == 23)
-  oled.print("Divine Order");
-*/
-
-
-  oled.setCursor(0, 8);
-  oled.print("Volume = ");
-  int newVol = map(vol, 0.0, 0.8, 0, 100);
-  oled.print(newVol);
-  oled.print("%");
-
-  if(debug == true)
-  {
-      oled.setCursor(0, 16);
-      oled.print("Pad ");
-      oled.print(padNumber);
-      oled.print(" = ");
-      oled.print(touchRead(pinTouch[padNumber]));
-  }
-  else
-  {
-      oled.setCursor(0, 16);
-      oled.print("Decay = ");
-      oled.print((int)dcVal/10);
-      oled.print("%  Oct:");
-      oled.print(octave_index);
-  }
-  
-  oled.setCursor(0, 24);
-  oled.print("Batt = ");  
-  oled.print(percentage);
-  oled.print("% ");
-  oled.print(voltage);
-  oled.print("V");
-
-  oled.display();
-
-  delay(10);
-}
-/////////////////////////////////////////////////////
-void volumeCheck()
-{
-  vol = (float)analogRead(volKnob) / 1280.0;
-
-  mixerMain.gain(0, vol);
-  mixerMain.gain(1, vol);
-}
-/////////////////////////////////////////////////////
-void dcValCheck()
-{
-  //check knob and set value as delay on dc constant for sine wave decay
-  dcVal = map(analogRead(decayKnob), 0, 1023, 1, 1000);
+  //buttonCheck();//check for button presses to change the scale 
 }
 /////////////////////////////////////////////////////
 void touchCheck()
@@ -323,7 +135,7 @@ void touchCheck()
     }
     if (touchRead(pinTouch[0]) <= 1800) 
     {
-      //one the pad is released, the note fades out with a decay val set by the dcVal knob
+      //once the pad is released, the note fades out with a decay val set by the dcVal knob
       dc1.amplitude(0, dcVal);
     }
       
@@ -469,6 +281,7 @@ void touchCheck()
 
   
 }
+/*
 //////////////////////////////////////////////////
 void buttonCheck()
 {
@@ -539,6 +352,8 @@ void buttonCheck()
   
 
 }
+
+*/
 void changeScale()
 {
   //Change numOfScales variable at top if adding new scale!!
@@ -667,35 +482,3 @@ void changeScale()
       scale[7] = root+19;
   }  
 }
-
-/*
-D3    E3    F3    A3    Bb3    C4    D4    E4  - Integral
-D3    E3    F#3    A3    B3    D4    E4    F#4 = Major 
-D3    F3    G3    A3    C4    D4    F4    A4  - Minor
-D3    E3    F3    A3    Bb3    D4    E4    F4  - Akebono
-D3    E3    F3    A3    C4    D4    E4    F4  - Pygmy
-*/
-/*
- * /////////////////////////////////////////////////////
-// B3 Schumann   B A D# G# C D# F# B 
-     {
-      59,
-      69,
-      75,
-      80,
-      84,
-      87,
-      90,
-      95  
-     },
-
-
-
-
-2,2,3,2,3
-3,2,2,3,2
-2,1,4,1,4
-2,1,4,3,2
-3,2,4,1,2
-4,1,2,2,2
- */

@@ -1,0 +1,457 @@
+EESchema Schematic File Version 4
+LIBS:Touch_Drum_Built-in_Audio-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MeowWolf_Templates:TEENSY_3.2_FULL_PINS U1
+U 1 1 5BA49460
+P 6000 3100
+F 0 "U1" H 6000 4687 60  0000 C CNN
+F 1 "TEENSY_3.2_FULL_PINS" H 6000 4581 60  0000 C CNN
+F 2 "MeowWolf_Templates:TEENSY_3.1-3.2_FULL_PINS" H 6000 2300 60  0001 C CNN
+F 3 "" H 6000 2300 60  0000 C CNN
+	1    6000 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2100 4850 2100
+Wire Wire Line
+	5000 2200 4850 2200
+Wire Wire Line
+	5000 2300 4850 2300
+Wire Wire Line
+	5000 2400 4850 2400
+Wire Wire Line
+	5000 2500 4850 2500
+Wire Wire Line
+	5000 2600 4850 2600
+Wire Wire Line
+	5000 2700 4850 2700
+Wire Wire Line
+	5000 2800 4850 2800
+Wire Wire Line
+	5000 2900 4850 2900
+Wire Wire Line
+	5000 3000 4850 3000
+Wire Wire Line
+	5000 3100 4850 3100
+Wire Wire Line
+	5000 3200 4850 3200
+Wire Wire Line
+	5000 3300 4850 3300
+Wire Wire Line
+	5000 3500 4850 3500
+Wire Wire Line
+	5000 3600 4850 3600
+Wire Wire Line
+	5000 3700 4850 3700
+Wire Wire Line
+	5000 3800 4850 3800
+Wire Wire Line
+	5000 3900 4850 3900
+Wire Wire Line
+	5000 4000 4850 4000
+Wire Wire Line
+	5000 4100 4850 4100
+Wire Wire Line
+	5000 4200 4850 4200
+Wire Wire Line
+	5000 4300 4850 4300
+Wire Wire Line
+	5000 4400 4850 4400
+Wire Wire Line
+	5000 2000 4850 2000
+Wire Wire Line
+	5000 1900 4850 1900
+Wire Wire Line
+	7200 2100 7000 2100
+Wire Wire Line
+	7200 2200 7000 2200
+Wire Wire Line
+	7200 2300 7000 2300
+Wire Wire Line
+	7200 2400 7000 2400
+Wire Wire Line
+	7200 2500 7000 2500
+Wire Wire Line
+	7200 2600 7000 2600
+Wire Wire Line
+	7200 2700 7000 2700
+Wire Wire Line
+	7200 2800 7000 2800
+Wire Wire Line
+	7200 2900 7000 2900
+Wire Wire Line
+	7200 3000 7000 3000
+Wire Wire Line
+	7200 3100 7000 3100
+Wire Wire Line
+	7200 3200 7000 3200
+Wire Wire Line
+	7200 3300 7000 3300
+Wire Wire Line
+	7200 3400 7000 3400
+Wire Wire Line
+	7200 3500 7000 3500
+Wire Wire Line
+	7200 3600 7000 3600
+Wire Wire Line
+	7200 3700 7000 3700
+Wire Wire Line
+	7200 3800 7000 3800
+Wire Wire Line
+	7200 3900 7000 3900
+Wire Wire Line
+	7200 4000 7000 4000
+Wire Wire Line
+	7200 4100 7000 4100
+Wire Wire Line
+	7200 4200 7000 4200
+Wire Wire Line
+	7200 4300 7000 4300
+Wire Wire Line
+	7200 4400 7000 4400
+Text GLabel 4850 1900 0    50   Input ~ 0
+TOUCH_0
+Text GLabel 4850 2000 0    50   Input ~ 0
+TOUCH_1
+Text GLabel 4850 3900 0    50   Input ~ 0
+TOUCH_2
+Text GLabel 4850 4000 0    50   Input ~ 0
+TOUCH_3
+Text GLabel 4850 4100 0    50   Input ~ 0
+TOUCH_4
+Text GLabel 4850 4200 0    50   Input ~ 0
+TOUCH_8
+Text GLabel 4850 4300 0    50   Input ~ 0
+TOUCH_9
+$Comp
+L power:GND #PWR0101
+U 1 1 5BA53AE5
+P 4350 1900
+F 0 "#PWR0101" H 4350 1650 50  0001 C CNN
+F 1 "GND" H 4355 1727 50  0000 C CNN
+F 2 "" H 4350 1900 50  0001 C CNN
+F 3 "" H 4350 1900 50  0001 C CNN
+	1    4350 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 1900 4350 1800
+Wire Wire Line
+	4350 1800 5000 1800
+Text GLabel 7200 3100 2    50   Input ~ 0
+TOUCH_5
+Text GLabel 7200 2400 2    50   Input ~ 0
+TOUCH_6
+Text GLabel 7200 2300 2    50   Input ~ 0
+TOUCH_7
+Text GLabel 4850 2100 0    50   Input ~ 0
+OLED_RST
+Text GLabel 4850 4400 0    50   Input ~ 0
+OLED_CS
+Text GLabel 7200 4400 2    50   Input ~ 0
+OLED_DC
+Text GLabel 7200 3400 2    50   Input ~ 0
+DECAY_KNOB
+Text GLabel 7200 2100 2    50   Input ~ 0
+VOL_KNOB
+Text GLabel 4850 3800 0    50   Input ~ 0
+OLED_SCK
+Text GLabel 4850 2700 0    50   Input ~ 0
+FOOT_BUTTON_1
+Text GLabel 4850 2600 0    50   Input ~ 0
+OLED_MOSI
+Text GLabel 4850 2400 0    50   Input ~ 0
+FOOT_BUTTON_0
+Text GLabel 4850 2300 0    50   Input ~ 0
+BUTTON_1
+Text GLabel 4850 2200 0    50   Input ~ 0
+BITTON_0
+Text GLabel 7200 2600 2    50   Input ~ 0
+SDA1
+Text GLabel 7200 2700 2    50   Input ~ 0
+SCL1
+$Comp
+L MeowWolf_Templates:TEENSY_3.2_FULL_PINS U2
+U 1 1 5BA545A6
+P 9250 3100
+F 0 "U2" H 9250 4687 60  0000 C CNN
+F 1 "Audio_Shield" H 9250 4581 60  0000 C CNN
+F 2 "MeowWolf_Templates:TEENSY_3.1-3.2_FULL_PINS" H 9250 2300 60  0001 C CNN
+F 3 "" H 9250 2300 60  0000 C CNN
+	1    9250 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 4300 8150 4300
+Wire Wire Line
+	8250 4200 8150 4200
+Text GLabel 8150 4200 0    50   Input ~ 0
+SDA1
+Text GLabel 8150 4300 0    50   Input ~ 0
+SCL1
+Text GLabel 7200 4300 2    50   Input ~ 0
+AUDIO_DIN
+Text GLabel 7200 4200 2    50   Input ~ 0
+AUDIO_LRCLK
+Text GLabel 10300 4300 2    50   Input ~ 0
+AUDIO_DIN
+Text GLabel 10300 4200 2    50   Input ~ 0
+AUDIO_LRCLK
+Wire Wire Line
+	8250 3700 8200 3700
+Wire Wire Line
+	10300 4200 10250 4200
+Wire Wire Line
+	10300 4300 10250 4300
+Text GLabel 8200 3700 0    50   Input ~ 0
+AUDIO_DOUT
+Text GLabel 4850 3700 0    50   Input ~ 0
+AUDIO_DOUT
+Wire Wire Line
+	8250 2800 8200 2800
+Wire Wire Line
+	8250 3000 8200 3000
+Text GLabel 8200 2800 0    50   Input ~ 0
+AUDIO_BCLK
+Text GLabel 4850 2800 0    50   Input ~ 0
+AUDIO_BCLK
+Text GLabel 8200 3000 0    50   Input ~ 0
+AUDIO_MCLK
+Text GLabel 4850 3000 0    50   Input ~ 0
+AUDIO_MCLK
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5BA74BB7
+P 2200 5300
+F 0 "J1" H 2280 5292 50  0000 L CNN
+F 1 "Conn_01x06" H 2280 5201 50  0000 L CNN
+F 2 "Connectors:1X06" H 2200 5300 50  0001 C CNN
+F 3 "~" H 2200 5300 50  0001 C CNN
+	1    2200 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5BA74C0E
+P 1950 5650
+F 0 "#PWR0103" H 1950 5400 50  0001 C CNN
+F 1 "GND" H 1955 5477 50  0000 C CNN
+F 2 "" H 1950 5650 50  0001 C CNN
+F 3 "" H 1950 5650 50  0001 C CNN
+	1    1950 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 5600 1950 5600
+Wire Wire Line
+	1950 5600 1950 5650
+Wire Wire Line
+	2000 5500 1900 5500
+Wire Wire Line
+	2000 5400 1900 5400
+Wire Wire Line
+	2000 5300 1900 5300
+Wire Wire Line
+	2000 5200 1900 5200
+Wire Wire Line
+	2000 5100 1900 5100
+Text GLabel 1900 5100 0    50   Input ~ 0
+OLED_RST
+Text GLabel 1900 5200 0    50   Input ~ 0
+OLED_MOSI
+Text GLabel 1900 5300 0    50   Input ~ 0
+OLED_SCK
+Text GLabel 1900 5400 0    50   Input ~ 0
+OLED_CS
+Text GLabel 1900 5500 0    50   Input ~ 0
+OLED_DC
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP1
+U 1 1 5BAA2102
+P 5150 5350
+F 0 "TP1" H 5214 5450 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5214 5450 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5150 5550 20  0001 C CNN
+F 3 "" H 5150 5350 50  0001 C CNN
+F 4 "XXX-00000" H 5214 5461 60  0001 C CNN "Field4"
+	1    5150 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP2
+U 1 1 5BAA21C2
+P 5150 5550
+F 0 "TP2" H 5214 5650 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5214 5650 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5150 5750 20  0001 C CNN
+F 3 "" H 5150 5550 50  0001 C CNN
+F 4 "XXX-00000" H 5214 5661 60  0001 C CNN "Field4"
+	1    5150 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP3
+U 1 1 5BAA21E0
+P 5150 5750
+F 0 "TP3" H 5214 5850 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5214 5850 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5150 5950 20  0001 C CNN
+F 3 "" H 5150 5750 50  0001 C CNN
+F 4 "XXX-00000" H 5214 5861 60  0001 C CNN "Field4"
+	1    5150 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP4
+U 1 1 5BAA2200
+P 5150 5950
+F 0 "TP4" H 5214 6050 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5214 6050 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5150 6150 20  0001 C CNN
+F 3 "" H 5150 5950 50  0001 C CNN
+F 4 "XXX-00000" H 5214 6061 60  0001 C CNN "Field4"
+	1    5150 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP5
+U 1 1 5BAA2220
+P 5150 6150
+F 0 "TP5" H 5214 6250 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5214 6250 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5150 6350 20  0001 C CNN
+F 3 "" H 5150 6150 50  0001 C CNN
+F 4 "XXX-00000" H 5214 6261 60  0001 C CNN "Field4"
+	1    5150 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP6
+U 1 1 5BAA22AE
+P 5900 5350
+F 0 "TP6" H 5964 5450 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5964 5450 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5900 5550 20  0001 C CNN
+F 3 "" H 5900 5350 50  0001 C CNN
+F 4 "XXX-00000" H 5964 5461 60  0001 C CNN "Field4"
+	1    5900 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP7
+U 1 1 5BAA22B6
+P 5900 5550
+F 0 "TP7" H 5964 5650 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5964 5650 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5900 5750 20  0001 C CNN
+F 3 "" H 5900 5550 50  0001 C CNN
+F 4 "XXX-00000" H 5964 5661 60  0001 C CNN "Field4"
+	1    5900 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP8
+U 1 1 5BAA22BE
+P 5900 5750
+F 0 "TP8" H 5964 5850 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5964 5850 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5900 5950 20  0001 C CNN
+F 3 "" H 5900 5750 50  0001 C CNN
+F 4 "XXX-00000" H 5964 5861 60  0001 C CNN "Field4"
+	1    5900 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP9
+U 1 1 5BAA22C6
+P 5900 5950
+F 0 "TP9" H 5964 6050 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5964 6050 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5900 6150 20  0001 C CNN
+F 3 "" H 5900 5950 50  0001 C CNN
+F 4 "XXX-00000" H 5964 6061 60  0001 C CNN "Field4"
+	1    5900 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:TEST-POINT3X5 TP10
+U 1 1 5BAA22CE
+P 5900 6150
+F 0 "TP10" H 5964 6250 45  0000 C CNN
+F 1 "TEST-POINT3X5" H 5964 6250 45  0001 C CNN
+F 2 "Connectors:PAD.LARGE" H 5900 6350 20  0001 C CNN
+F 3 "" H 5900 6150 50  0001 C CNN
+F 4 "XXX-00000" H 5964 6261 60  0001 C CNN "Field4"
+	1    5900 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 5350 5100 5350
+Wire Wire Line
+	5150 5550 5100 5550
+Wire Wire Line
+	5150 5750 5100 5750
+Wire Wire Line
+	5150 5950 5100 5950
+Wire Wire Line
+	5150 6150 5100 6150
+Wire Wire Line
+	5900 5350 5850 5350
+Wire Wire Line
+	5900 5550 5850 5550
+Wire Wire Line
+	5900 5750 5850 5750
+Wire Wire Line
+	5900 5950 5850 5950
+Wire Wire Line
+	5900 6150 5850 6150
+Text GLabel 5100 5350 0    50   Input ~ 0
+TOUCH_0
+Text GLabel 5100 5550 0    50   Input ~ 0
+TOUCH_1
+Text GLabel 5100 5750 0    50   Input ~ 0
+TOUCH_2
+Text GLabel 5100 5950 0    50   Input ~ 0
+TOUCH_3
+Text GLabel 5100 6150 0    50   Input ~ 0
+TOUCH_4
+Text GLabel 5850 6150 0    50   Input ~ 0
+TOUCH_9
+Text GLabel 5850 5950 0    50   Input ~ 0
+TOUCH_8
+Text GLabel 5850 5350 0    50   Input ~ 0
+TOUCH_5
+Text GLabel 5850 5550 0    50   Input ~ 0
+TOUCH_6
+Text GLabel 5850 5750 0    50   Input ~ 0
+TOUCH_7
+$Comp
+L power:GND #PWR0102
+U 1 1 5BA57DC1
+P 8150 1850
+F 0 "#PWR0102" H 8150 1600 50  0001 C CNN
+F 1 "GND" H 8155 1677 50  0000 C CNN
+F 2 "" H 8150 1850 50  0001 C CNN
+F 3 "" H 8150 1850 50  0001 C CNN
+	1    8150 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 1850 8150 1800
+Wire Wire Line
+	8150 1800 8250 1800
+$EndSCHEMATC
