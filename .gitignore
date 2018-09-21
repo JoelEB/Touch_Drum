@@ -24,3 +24,37 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+
+#DS_Store
+*.DS_Store
+
+#Eagle Files
+*.s#?
+*.b#?
+*.l#?
+
+*.pro
+*.job
+
+*.lck
+
+*.eps
+*.info
+*.drd.*
+*.drd
+
+*.pls
+*.gpi
+*.drl
+*.dri
+
+*.crs
+*.crc
+*.sts
+*.plc
+*.sol
+*.l15
+*.ly2
+*.cmp
+*.$$$
+
