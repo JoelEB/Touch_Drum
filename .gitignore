@@ -45,8 +45,6 @@ _autosave-*
 
 *.pls
 *.gpi
-*.drl
-*.dri
 
 *.crs
 *.crc
