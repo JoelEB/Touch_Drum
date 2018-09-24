@@ -24,33 +24,58 @@
 *******************************************************************************/
 //These libraries are included by the Teensy Audio System Design Tool 
 #include <Audio2.h>
-//#include <SPI.h>
+#include <SPI.h>
+#include <TeensyView.h>
 #include <SerialFlash.h>
 
 #include "note_frequency.h"
 #include "TeensyAudioDesignTool.h"
 
-int pinTouch[] = {17,19,32,33,15,1,16,18,0,25};
+int pinTouch[] = {17,32,19,33,1,15,18,16,0,25};
 //0,1,15,16,17,18,19,25,32,33}; //25 = white, 32 = yellow, 33 = blue
+
+//Alternate (Audio)
+#define PIN_RESET 2
+#define PIN_DC    21
+#define PIN_CS    20
+#define PIN_SCK   14
+#define PIN_MOSI  7
+
+#define volKnob A13 //grey wire 
+#define decayKnob A12 //black wire 
 
 int scale_index = 0;//var to keep track fo which scale is being used
 int note_index = 57;
 int octave_index = 0;
 
-int dcVal = 400;//value to control the decay of each note 
+float vol = 0;
+int dcVal = 0;//value to control the decay of each note 
 int padNumber = 0;//debug for printing pad values to OLED
 
 ////////////////////CHANGE THIS WHEN ADDING MORE SCALES
 int numOfScales = 10 ;//indexed at zero (subtract 1) 
 ///////////////////////////////////////////////////////
 
+TeensyView oled(PIN_RESET, PIN_DC, PIN_CS, PIN_SCK, PIN_MOSI);
 
 int scale[8];
+
+#define touchThreshold1 1300 
+#define touchThreshold2 1300 
+#define touchThreshold3 1300 
+#define touchThreshold4 1300 
+#define touchThreshold5 1300 
+#define touchThreshold6 1300 
+#define touchThreshold7 1300 
+#define touchThreshold8 1300 
+#define touchThreshold9 1300 
+#define touchThreshold10 1300 
 
 ////////////////////////////////////////////////////////
 void setup() 
 {
   Serial.begin(115200);
+
   
   //set aside audio memory 
   AudioMemory(64);
@@ -84,31 +109,151 @@ void setup()
 
   //initialize volume
   sgtl5000_1.enable();
-  sgtl5000_1.volume(0.7);
+  sgtl5000_1.volume(0.8);
   sgtl5000_1.lineOutLevel(5);
-
+  
   changeScale();//start off at middle C
+
+  //Initialize the OLED
+  oled.begin();
+  // clear(ALL) will clear out the OLED's graphic memory.
+  // clear(PAGE) will clear the Arduino's display buffer.
+  oled.clear(ALL);  // Clear the display's memory (gets rid of artifacts)
+  // To actually draw anything on the display, you must call the
+  // display() function.
+  oled.display();
+  // Give the splash screen some time to shine
+  delay(1000);
 }
 //////////////////////////////////////////////
 void loop() 
 {    
-  //volumeCheck();//check the volume knob 
+  volumeCheck();//check the volume knob
+   
+  dcValCheck();//check the decay knob
 
   touchCheck();//check if any of the capacitive pads have been touched
 
+  oledPrint();//print to TeensyView
+
   for(int i =0; i<=9; i++)
   {
-    Serial.print("Pin");
-    Serial.print(i);
+    Serial.print("Pad");
+    Serial.print(i+1);
     Serial.print(" : ");
     Serial.print(touchRead(pinTouch[i]));  
     Serial.print(" ");
+
   }
-  Serial.println();
+    Serial.println();
+    Serial.print("Vol:");
+    Serial.print(vol);
+    Serial.print(" Decay:");
+    Serial.println(dcVal);
 
-  //dcValCheck();//check the decay knob
+  
+}
+/////////////////////////////////////////////////////
+void volumeCheck()
+{
+  vol = (float)analogRead(volKnob) / 1280.0;
 
-  //buttonCheck();//check for button presses to change the scale 
+  mixerMain.gain(0, vol);
+  mixerMain.gain(1, vol);
+}
+/////////////////////////////////////////////////////
+void dcValCheck()
+{
+  //check knob and set value as delay on dc constant for sine wave decay
+  dcVal = map(analogRead(decayKnob), 0, 1023, 2, 1000);
+}
+/////////////////////////////////////////////////////
+void oledPrint()
+{
+  oled.clear(PAGE);
+  
+  oled.setCursor(0, 0);
+  oled.print("Scale = ");  
+
+  if(note_index == 60)
+  oled.print("C ");
+  if(note_index == 61)
+  oled.print("C# ");
+  if(note_index == 62)
+  oled.print("D ");
+  if(note_index == 63)
+  oled.print("D# ");
+  if(note_index == 64)
+  oled.print("E ");
+  if(note_index == 65)
+  oled.print("F ");
+  if(note_index == 66)
+  oled.print("F# ");
+  if(note_index == 67)
+  oled.print("G ");
+  if(note_index == 68)
+  oled.print("G# ");
+  if(note_index == 57)
+  oled.print("A ");
+  if(note_index == 58)
+  oled.print("A# ");
+  if(note_index == 59)
+  oled.print("B ");
+
+  
+  if(scale_index == 0)
+  oled.print("Major");
+  if(scale_index == 1)
+  oled.print("Minor");
+  if(scale_index == 2)
+  oled.print("Akebono");
+  if(scale_index == 3)
+  oled.print("Pygmy");
+  if(scale_index == 4)
+  oled.print("Equinox");
+  if(scale_index == 5)
+  oled.print("Sapphire");
+  if(scale_index == 6)
+  oled.print("Gypsy");
+  if(scale_index == 7)
+  oled.print("SlvrSpring");
+  if(scale_index == 8)
+  oled.print("Integral");
+  if(scale_index == 9)
+  oled.print("Dorian");
+  if(scale_index == 10)
+  oled.print("GldArcadia");
+
+  oled.setCursor(0, 8);
+  oled.print("Volume = ");
+  int newVol = map(vol, 0.0, 0.8, 0, 100);
+  oled.print(newVol);
+  oled.print("%");
+  
+  oled.setCursor(0, 16);
+  oled.print("Decay = ");
+  oled.print((int)dcVal/10);
+  oled.print("%  Oct:");
+  oled.print(octave_index);
+
+
+  oled.setCursor(0, 24);
+  oled.print("Pad ");
+  oled.print(padNumber);
+  oled.print(" = ");
+  oled.print(touchRead(pinTouch[padNumber]));
+  
+ /* 
+  oled.setCursor(0, 24);
+  oled.print("Batt = ");  
+  oled.print(percentage);
+  oled.print("% ");
+  oled.print(voltage);
+  oled.print("V");
+  oled.display();
+  */
+ oled.display();
+  delay(10);
 }
 /////////////////////////////////////////////////////
 void touchCheck()
@@ -117,7 +262,7 @@ void touchCheck()
   //The value necessary to trigger each note will require some trial and error to get the
   //sensitivity just right. Try adjusting these values to get the best response. 
     
-    if (touchRead(pinTouch[0]) > 1800)
+    if (touchRead(pinTouch[0]) > touchThreshold1)
     {
       //once a pad is touched, a value from the note frquency froma table is looked up via a 2D table
       //with x corresponding to a scale and y corresponding to one of the eight notes on the drum. 
@@ -134,14 +279,14 @@ void touchCheck()
         sine1.frequency(note_frequency[scale[0]]);
       dc1.amplitude(1.0, 5);
     }
-    if (touchRead(pinTouch[0]) <= 1800) 
+    if (touchRead(pinTouch[0]) <= touchThreshold1) 
     {
       //once the pad is released, the note fades out with a decay val set by the dcVal knob
       dc1.amplitude(0, dcVal);
     }
       
 
-    if (touchRead(pinTouch[1]) > 1800) 
+    if (touchRead(pinTouch[1]) > touchThreshold2) 
     {
       if(octave_index == 1)
         sine2.frequency(note_frequency[scale[1]+12]);
@@ -155,13 +300,13 @@ void touchCheck()
         sine2.frequency(note_frequency[scale[1]]);
       dc2.amplitude(1.0, 5);
     }
-    if (touchRead(pinTouch[1]) <= 1800) 
+    if (touchRead(pinTouch[1]) <= touchThreshold2) 
     {
       dc2.amplitude(0, dcVal);
     }
 
     
-    if (touchRead(pinTouch[2]) > 1900)
+    if (touchRead(pinTouch[2]) > touchThreshold3)
     {
       if(octave_index == 1)
         sine3.frequency(note_frequency[scale[2]+12]);
@@ -175,13 +320,13 @@ void touchCheck()
         sine3.frequency(note_frequency[scale[2]]);
       dc3.amplitude(1.0, 5);
     }
-    if (touchRead(pinTouch[2]) <= 1900) 
+    if (touchRead(pinTouch[2]) <= touchThreshold3) 
     {
       dc3.amplitude(0, dcVal);
     }
     
 
-    if (touchRead(pinTouch[3]) > 1800)
+    if (touchRead(pinTouch[3]) > touchThreshold4)
     {
       if(octave_index == 1)
         sine4.frequency(note_frequency[scale[3]+12]);
@@ -195,12 +340,12 @@ void touchCheck()
         sine4.frequency(note_frequency[scale[3]]);
       dc4.amplitude(1.0, 5);
     }
-    if (touchRead(pinTouch[3]) <= 1800)
+    if (touchRead(pinTouch[3]) <= touchThreshold4)
     {
       dc4.amplitude(0, dcVal);
     }
        
-    if (touchRead(pinTouch[4]) > 1800) 
+    if (touchRead(pinTouch[4]) > touchThreshold5) 
     {
       if(octave_index == 1)
         sine5.frequency(note_frequency[scale[4]+12]);
@@ -214,12 +359,12 @@ void touchCheck()
         sine5.frequency(note_frequency[scale[4]]);
       dc5.amplitude(1.0, 5);
     }
-    if (touchRead(pinTouch[4]) <= 1800)
+    if (touchRead(pinTouch[4]) <= touchThreshold5)
     {
       dc5.amplitude(0, dcVal);
     }
     
-    if (touchRead(pinTouch[5]) > 1800)
+    if (touchRead(pinTouch[5]) > touchThreshold6)
     {
       if(octave_index == 1)
         sine6.frequency(note_frequency[scale[5]+12]);
@@ -233,14 +378,14 @@ void touchCheck()
         sine6.frequency(note_frequency[scale[5]]);
       dc6.amplitude(1.0, 5);
     }
-    if (touchRead(pinTouch[5]) <= 1800) 
+    if (touchRead(pinTouch[5]) <= touchThreshold6) 
     {
       dc6.amplitude(0, dcVal);
     }
     
 
    
-    if (touchRead(pinTouch[6]) > 1800)
+    if (touchRead(pinTouch[6]) > touchThreshold7)
     {
       if(octave_index == 1)
         sine7.frequency(note_frequency[scale[6]+12]);
@@ -254,13 +399,13 @@ void touchCheck()
         sine7.frequency(note_frequency[scale[6]]);
       dc7.amplitude(1.0, 5);
     }
-    if (touchRead(pinTouch[6]) <= 1800) 
+    if (touchRead(pinTouch[6]) <= touchThreshold7) 
     {
       dc7.amplitude(0, dcVal);
     }
     
    
-    if (touchRead(pinTouch[7]) > 1700) 
+    if (touchRead(pinTouch[7]) > touchThreshold8) 
     {
       if(octave_index == 1)
         sine8.frequency(note_frequency[scale[7]+12]);
@@ -274,12 +419,12 @@ void touchCheck()
         sine8.frequency(note_frequency[scale[7]]);
       dc8.amplitude(1.0, 5);
     }
-    if (touchRead(pinTouch[7]) <= 1700) 
+    if (touchRead(pinTouch[7]) <= touchThreshold8) 
     {
       dc8.amplitude(0, dcVal);
     }
 
-    if (touchRead(pinTouch[8]) > 1800)
+    if (touchRead(pinTouch[8]) > touchThreshold9)
     {
     note_index++;
     padNumber++;
@@ -294,10 +439,10 @@ void touchCheck()
     }
     octave_index = 0;
     changeScale();
-    delay(100);
+    delay(200);
     }
 
-    if (touchRead(pinTouch[9]) > 1800)
+    if (touchRead(pinTouch[9]) > touchThreshold10)
     {
 
     scale_index++;
@@ -314,7 +459,7 @@ void touchCheck()
 
     octave_index = 0;
     changeScale();
-    delay(100);
+    delay(200);
     }
 
   
