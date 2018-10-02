@@ -114,16 +114,23 @@ void setup()
   
   changeScale();//start off at middle C
 
+  //Initilize Volaume
+  vol = (float)analogRead(volKnob) / 1280.0;
+  //Initialize Decay Knob
+  dcVal = map(analogRead(decayKnob), 0, 1023, 2, 1000);
+
   //Initialize the OLED
   oled.begin();
   // clear(ALL) will clear out the OLED's graphic memory.
   // clear(PAGE) will clear the Arduino's display buffer.
   oled.clear(ALL);  // Clear the display's memory (gets rid of artifacts)
+  //oled.clear(PAGE);
   // To actually draw anything on the display, you must call the
   // display() function.
   oled.display();
   // Give the splash screen some time to shine
-  delay(1000);
+  delay(5000);
+
 }
 //////////////////////////////////////////////
 void loop() 
@@ -156,16 +163,31 @@ void loop()
 /////////////////////////////////////////////////////
 void volumeCheck()
 {
-  vol = (float)analogRead(volKnob) / 1280.0;
+  //vol = (float)analogRead(volKnob) / 1280.0;
+  
+  float newReading = (float)analogRead(volKnob) / 1280.0;
+  
+  if( vol != newReading )
+  {
+    vol = newReading;
+    mixerMain.gain(0, vol);
+    mixerMain.gain(1, vol);
+  }
 
-  mixerMain.gain(0, vol);
-  mixerMain.gain(1, vol);
+
 }
 /////////////////////////////////////////////////////
 void dcValCheck()
 {
   //check knob and set value as delay on dc constant for sine wave decay
-  dcVal = map(analogRead(decayKnob), 0, 1023, 2, 1000);
+  //dcVal = map(analogRead(decayKnob), 0, 1023, 2, 1000);
+
+  float newReading = (float)analogRead(volKnob) / 1280.0;
+
+  if( dcVal != newReading )
+  {
+    dcVal = newReading;
+  }
 }
 /////////////////////////////////////////////////////
 void oledPrint()

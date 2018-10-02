@@ -29,7 +29,6 @@
 #include <SerialFlash.h>
 #include <Bounce.h>
 #include <TeensyView.h>
-#include <Wire.h>
 #include <MAX17043GU.h>
 
 #define MAX17043_ADDRESS 0x36
@@ -535,6 +534,7 @@ void buttonCheck()
 }
 //////////////////////////////////////////////////
 void calibratePads()
+{}
 //////////////////////////////////////////////////
 void changeScale()
 {
