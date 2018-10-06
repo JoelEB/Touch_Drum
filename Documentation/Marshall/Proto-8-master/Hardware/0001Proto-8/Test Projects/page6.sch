@@ -1,0 +1,2227 @@
+EESchema Schematic File Version 4
+LIBS:Touch_Drum_V1-cache
+LIBS:Teensy_test_layout-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 1 1 5689C43A
+P 2350 4100
+F 0 "U?" H 2350 4100 50  0000 C CNN
+F 1 "SF-74HC595" V 2550 4100 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 2350 4100 50  0001 C CNN
+F 3 "" H 2350 4100 50  0000 C CNN
+	1    2350 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 2 1 5689C495
+P 1000 6800
+F 0 "U?" H 1000 6800 50  0000 C CNN
+F 1 "SF-74HC595" V 1200 6800 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 1000 6800 50  0001 C CNN
+F 3 "" H 1000 6800 50  0000 C CNN
+	2    1000 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 5689C5DA
+P 4050 4000
+F 0 "P?" H 4050 4450 50  0000 C CNN
+F 1 "CONN_01X08" V 4150 4000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 4050 4000 50  0001 C CNN
+F 3 "" H 4050 4000 50  0000 C CNN
+	1    4050 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 1050 4250 0    50   Input ~ 0
+LED_LATCH
+Text GLabel 1050 4350 0    50   Input ~ 0
+LED_OE
+$Comp
+L Touch_Drum_V1-rescue:C- C?
+U 1 1 5689C87A
+P 650 6800
+F 0 "C?" H 675 6900 50  0000 L CNN
+F 1 "C" H 675 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 688 6650 50  0001 C CNN
+F 3 "" H 650 6800 50  0000 C CNN
+	1    650  6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 1 1 5689CC9A
+P 2350 5300
+F 0 "U?" H 2350 5300 50  0000 C CNN
+F 1 "SF-74HC595" V 2550 5300 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 2350 5300 50  0001 C CNN
+F 3 "" H 2350 5300 50  0000 C CNN
+	1    2350 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 5689CCA0
+P 4050 5200
+F 0 "P?" H 4050 5650 50  0000 C CNN
+F 1 "CONN_01X08" V 4150 5200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 4050 5200 50  0001 C CNN
+F 3 "" H 4050 5200 50  0000 C CNN
+	1    4050 5200
+	1    0    0    -1  
+$EndComp
+Text GLabel 1600 5450 0    50   Input ~ 0
+LED_LATCH
+Text GLabel 1600 5550 0    50   Input ~ 0
+LED_OE
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 1 1 5689CDA4
+P 7350 4100
+F 0 "U?" H 7350 4100 50  0000 C CNN
+F 1 "SF-74HC595" V 7550 4100 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 7350 4100 50  0001 C CNN
+F 3 "" H 7350 4100 50  0000 C CNN
+	1    7350 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 5689CDAA
+P 9050 4000
+F 0 "P?" H 9050 4450 50  0000 C CNN
+F 1 "CONN_01X08" V 9150 4000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 9050 4000 50  0001 C CNN
+F 3 "" H 9050 4000 50  0000 C CNN
+	1    9050 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 6600 4250 0    50   Input ~ 0
+LED_LATCH
+Text GLabel 6600 4350 0    50   Input ~ 0
+LED_OE
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 1 1 5689CDC0
+P 7350 5300
+F 0 "U?" H 7350 5300 50  0000 C CNN
+F 1 "SF-74HC595" V 7550 5300 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 7350 5300 50  0001 C CNN
+F 3 "" H 7350 5300 50  0000 C CNN
+	1    7350 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 5689CDC6
+P 9050 5200
+F 0 "P?" H 9050 5650 50  0000 C CNN
+F 1 "CONN_01X08" V 9150 5200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 9050 5200 50  0001 C CNN
+F 3 "" H 9050 5200 50  0000 C CNN
+	1    9050 5200
+	1    0    0    -1  
+$EndComp
+Text GLabel 6600 5450 0    50   Input ~ 0
+LED_LATCH
+Text GLabel 6600 5550 0    50   Input ~ 0
+LED_OE
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 1 1 5689D0E6
+P 2000 1300
+F 0 "U?" H 2000 1300 50  0000 C CNN
+F 1 "SF-74HC595" V 2200 1300 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 2000 1300 50  0001 C CNN
+F 3 "" H 2000 1300 50  0000 C CNN
+	1    2000 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 5689D0EC
+P 3700 1200
+F 0 "P?" H 3700 1650 50  0000 C CNN
+F 1 "CONN_01X08" V 3800 1200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 3700 1200 50  0001 C CNN
+F 3 "" H 3700 1200 50  0000 C CNN
+	1    3700 1200
+	1    0    0    -1  
+$EndComp
+Text GLabel 1250 950  0    50   Input ~ 0
+SPI_MOSI
+Text GLabel 1250 1450 0    50   Input ~ 0
+LED_LATCH
+Text GLabel 1250 1550 0    50   Input ~ 0
+LED_OE
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 1 1 5689D102
+P 2000 2500
+F 0 "U?" H 2000 2500 50  0000 C CNN
+F 1 "SF-74HC595" V 2200 2500 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 2000 2500 50  0001 C CNN
+F 3 "" H 2000 2500 50  0000 C CNN
+	1    2000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 5689D108
+P 3700 2400
+F 0 "P?" H 3700 2850 50  0000 C CNN
+F 1 "CONN_01X08" V 3800 2400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 3700 2400 50  0001 C CNN
+F 3 "" H 3700 2400 50  0000 C CNN
+	1    3700 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 1250 2650 0    50   Input ~ 0
+LED_LATCH
+Text GLabel 1250 2750 0    50   Input ~ 0
+LED_OE
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 1 1 5689D11E
+P 7000 1300
+F 0 "U?" H 7000 1300 50  0000 C CNN
+F 1 "SF-74HC595" V 7200 1300 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 7000 1300 50  0001 C CNN
+F 3 "" H 7000 1300 50  0000 C CNN
+	1    7000 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 5689D124
+P 8700 1200
+F 0 "P?" H 8700 1650 50  0000 C CNN
+F 1 "CONN_01X08" V 8800 1200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 8700 1200 50  0001 C CNN
+F 3 "" H 8700 1200 50  0000 C CNN
+	1    8700 1200
+	1    0    0    -1  
+$EndComp
+Text GLabel 6250 1450 0    50   Input ~ 0
+LED_LATCH
+Text GLabel 6250 1550 0    50   Input ~ 0
+LED_OE
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 1 1 5689D13A
+P 7000 2500
+F 0 "U?" H 7000 2500 50  0000 C CNN
+F 1 "SF-74HC595" V 7200 2500 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 7000 2500 50  0001 C CNN
+F 3 "" H 7000 2500 50  0000 C CNN
+	1    7000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 5689D140
+P 8700 2400
+F 0 "P?" H 8700 2850 50  0000 C CNN
+F 1 "CONN_01X08" V 8800 2400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 8700 2400 50  0001 C CNN
+F 3 "" H 8700 2400 50  0000 C CNN
+	1    8700 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 6250 2650 0    50   Input ~ 0
+LED_LATCH
+Text GLabel 6250 2750 0    50   Input ~ 0
+LED_OE
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 2 1 5689D5B0
+P 1800 6800
+F 0 "U?" H 1800 6800 50  0000 C CNN
+F 1 "SF-74HC595" V 2000 6800 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 1800 6800 50  0001 C CNN
+F 3 "" H 1800 6800 50  0000 C CNN
+	2    1800 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:C- C?
+U 1 1 5689D5B6
+P 1450 6800
+F 0 "C?" H 1475 6900 50  0000 L CNN
+F 1 "C" H 1475 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1488 6650 50  0001 C CNN
+F 3 "" H 1450 6800 50  0000 C CNN
+	1    1450 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 2 1 5689D6B6
+P 2600 6800
+F 0 "U?" H 2600 6800 50  0000 C CNN
+F 1 "SF-74HC595" V 2800 6800 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 2600 6800 50  0001 C CNN
+F 3 "" H 2600 6800 50  0000 C CNN
+	2    2600 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:C- C?
+U 1 1 5689D6BC
+P 2250 6800
+F 0 "C?" H 2275 6900 50  0000 L CNN
+F 1 "C" H 2275 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2288 6650 50  0001 C CNN
+F 3 "" H 2250 6800 50  0000 C CNN
+	1    2250 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 2 1 5689D6C8
+P 3400 6800
+F 0 "U?" H 3400 6800 50  0000 C CNN
+F 1 "SF-74HC595" V 3600 6800 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 3400 6800 50  0001 C CNN
+F 3 "" H 3400 6800 50  0000 C CNN
+	2    3400 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:C- C?
+U 1 1 5689D6CE
+P 3050 6800
+F 0 "C?" H 3075 6900 50  0000 L CNN
+F 1 "C" H 3075 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3088 6650 50  0001 C CNN
+F 3 "" H 3050 6800 50  0000 C CNN
+	1    3050 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 2 1 5689D832
+P 4200 6800
+F 0 "U?" H 4200 6800 50  0000 C CNN
+F 1 "SF-74HC595" V 4400 6800 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 4200 6800 50  0001 C CNN
+F 3 "" H 4200 6800 50  0000 C CNN
+	2    4200 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:C- C?
+U 1 1 5689D838
+P 3850 6800
+F 0 "C?" H 3875 6900 50  0000 L CNN
+F 1 "C" H 3875 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3888 6650 50  0001 C CNN
+F 3 "" H 3850 6800 50  0000 C CNN
+	1    3850 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 2 1 5689D844
+P 5000 6800
+F 0 "U?" H 5000 6800 50  0000 C CNN
+F 1 "SF-74HC595" V 5200 6800 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 5000 6800 50  0001 C CNN
+F 3 "" H 5000 6800 50  0000 C CNN
+	2    5000 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:C- C?
+U 1 1 5689D84A
+P 4650 6800
+F 0 "C?" H 4675 6900 50  0000 L CNN
+F 1 "C" H 4675 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4688 6650 50  0001 C CNN
+F 3 "" H 4650 6800 50  0000 C CNN
+	1    4650 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 2 1 5689D856
+P 5800 6800
+F 0 "U?" H 5800 6800 50  0000 C CNN
+F 1 "SF-74HC595" V 6000 6800 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 5800 6800 50  0001 C CNN
+F 3 "" H 5800 6800 50  0000 C CNN
+	2    5800 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:C- C?
+U 1 1 5689D85C
+P 5450 6800
+F 0 "C?" H 5475 6900 50  0000 L CNN
+F 1 "C" H 5475 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5488 6650 50  0001 C CNN
+F 3 "" H 5450 6800 50  0000 C CNN
+	1    5450 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:SF-74HC595- U?
+U 2 1 5689D868
+P 6600 6800
+F 0 "U?" H 6600 6800 50  0000 C CNN
+F 1 "SF-74HC595" V 6800 6800 50  0000 C CNN
+F 2 "SparkFun-Footprints:SF-SOIC-16" H 6600 6800 50  0001 C CNN
+F 3 "" H 6600 6800 50  0000 C CNN
+	2    6600 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:C- C?
+U 1 1 5689D86E
+P 6250 6800
+F 0 "C?" H 6275 6900 50  0000 L CNN
+F 1 "C" H 6275 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6288 6650 50  0001 C CNN
+F 3 "" H 6250 6800 50  0000 C CNN
+	1    6250 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+5V- #PWR?
+U 1 1 568A1F71
+P 1000 6150
+F 0 "#PWR?" H 1000 6000 50  0001 C CNN
+F 1 "+5V" H 1000 6290 50  0000 C CNN
+F 2 "" H 1000 6150 50  0000 C CNN
+F 3 "" H 1000 6150 50  0000 C CNN
+	1    1000 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3650 3150 3650
+Wire Wire Line
+	3050 3750 3450 3750
+Wire Wire Line
+	3050 3850 3150 3850
+Wire Wire Line
+	3050 3950 3450 3950
+Wire Wire Line
+	3050 4050 3150 4050
+Wire Wire Line
+	3050 4150 3450 4150
+Wire Wire Line
+	3050 4250 3150 4250
+Wire Wire Line
+	3050 4350 3450 4350
+Wire Wire Line
+	1600 3750 1650 3750
+Wire Wire Line
+	1650 3950 1050 3950
+Wire Wire Line
+	1650 4250 1050 4250
+Wire Wire Line
+	1050 4350 1650 4350
+Wire Wire Line
+	650  6650 650  6250
+Wire Wire Line
+	650  6250 1000 6250
+Wire Wire Line
+	1000 6150 1000 6350
+Wire Wire Line
+	1000 7250 1000 7450
+Wire Wire Line
+	1000 7350 650  7350
+Wire Wire Line
+	650  7350 650  6950
+Wire Wire Line
+	3050 4850 3150 4850
+Wire Wire Line
+	3050 4950 3450 4950
+Wire Wire Line
+	3050 5050 3150 5050
+Wire Wire Line
+	3050 5150 3450 5150
+Wire Wire Line
+	3050 5250 3150 5250
+Wire Wire Line
+	3050 5350 3450 5350
+Wire Wire Line
+	3050 5450 3150 5450
+Wire Wire Line
+	3050 5550 3450 5550
+Wire Wire Line
+	1600 4950 1650 4950
+Wire Wire Line
+	1650 5150 1600 5150
+Wire Wire Line
+	1650 5450 1600 5450
+Wire Wire Line
+	1650 5550 1600 5550
+Wire Wire Line
+	8050 3650 8150 3650
+Wire Wire Line
+	8050 3750 8450 3750
+Wire Wire Line
+	8050 3850 8150 3850
+Wire Wire Line
+	8050 3950 8450 3950
+Wire Wire Line
+	8050 4050 8150 4050
+Wire Wire Line
+	8050 4150 8450 4150
+Wire Wire Line
+	8050 4250 8150 4250
+Wire Wire Line
+	8050 4350 8450 4350
+Wire Wire Line
+	6050 3750 6650 3750
+Wire Wire Line
+	6650 3950 6600 3950
+Wire Wire Line
+	6650 4250 6600 4250
+Wire Wire Line
+	6650 4350 6600 4350
+Wire Wire Line
+	8050 4850 8150 4850
+Wire Wire Line
+	8050 4950 8450 4950
+Wire Wire Line
+	8050 5050 8150 5050
+Wire Wire Line
+	8050 5150 8450 5150
+Wire Wire Line
+	8050 5250 8150 5250
+Wire Wire Line
+	8050 5350 8450 5350
+Wire Wire Line
+	8050 5450 8150 5450
+Wire Wire Line
+	8050 5550 8450 5550
+Wire Wire Line
+	6650 5150 6600 5150
+Wire Wire Line
+	6650 5450 6600 5450
+Wire Wire Line
+	6650 5550 6600 5550
+Wire Wire Line
+	1300 950  1250 950 
+Wire Wire Line
+	1300 1150 1250 1150
+Wire Wire Line
+	1300 1450 1250 1450
+Wire Wire Line
+	1300 1550 1250 1550
+Wire Wire Line
+	2700 2050 2800 2050
+Wire Wire Line
+	2700 2150 3100 2150
+Wire Wire Line
+	2700 2250 2800 2250
+Wire Wire Line
+	2700 2350 3100 2350
+Wire Wire Line
+	2700 2450 2800 2450
+Wire Wire Line
+	2700 2550 3100 2550
+Wire Wire Line
+	2700 2650 2800 2650
+Wire Wire Line
+	2700 2750 3100 2750
+Wire Wire Line
+	1300 2350 1250 2350
+Wire Wire Line
+	1300 2650 1250 2650
+Wire Wire Line
+	1300 2750 1250 2750
+Wire Wire Line
+	7700 850  7800 850 
+Wire Wire Line
+	7700 950  8100 950 
+Wire Wire Line
+	7700 1050 7800 1050
+Wire Wire Line
+	7700 1150 8100 1150
+Wire Wire Line
+	7700 1250 7800 1250
+Wire Wire Line
+	7700 1350 8100 1350
+Wire Wire Line
+	7700 1450 7800 1450
+Wire Wire Line
+	7700 1550 8100 1550
+Wire Wire Line
+	5700 950  6300 950 
+Wire Wire Line
+	6300 1150 6250 1150
+Wire Wire Line
+	6300 1450 6250 1450
+Wire Wire Line
+	6300 1550 6250 1550
+Wire Wire Line
+	7700 2050 7800 2050
+Wire Wire Line
+	7700 2150 8100 2150
+Wire Wire Line
+	7700 2250 7800 2250
+Wire Wire Line
+	7700 2350 8100 2350
+Wire Wire Line
+	7700 2450 7800 2450
+Wire Wire Line
+	7700 2550 8100 2550
+Wire Wire Line
+	7700 2650 7800 2650
+Wire Wire Line
+	7700 2750 8100 2750
+Wire Wire Line
+	6300 2350 6250 2350
+Wire Wire Line
+	6300 2650 6250 2650
+Wire Wire Line
+	6300 2750 6250 2750
+Wire Wire Line
+	1450 6650 1450 6250
+Wire Wire Line
+	1450 6250 1800 6250
+Wire Wire Line
+	1800 6150 1800 6350
+Wire Wire Line
+	1800 7250 1800 7450
+Wire Wire Line
+	1800 7350 1450 7350
+Wire Wire Line
+	1450 7350 1450 6950
+Wire Wire Line
+	2250 6650 2250 6250
+Wire Wire Line
+	2250 6250 2600 6250
+Wire Wire Line
+	2600 6150 2600 6350
+Wire Wire Line
+	2600 7250 2600 7450
+Wire Wire Line
+	2600 7350 2250 7350
+Wire Wire Line
+	2250 7350 2250 6950
+Wire Wire Line
+	3050 6650 3050 6250
+Wire Wire Line
+	3050 6250 3400 6250
+Wire Wire Line
+	3400 6150 3400 6350
+Wire Wire Line
+	3400 7350 3050 7350
+Wire Wire Line
+	3050 7350 3050 6950
+Wire Wire Line
+	3850 6650 3850 6250
+Wire Wire Line
+	3850 6250 4200 6250
+Wire Wire Line
+	4200 6150 4200 6350
+Wire Wire Line
+	4200 7250 4200 7450
+Wire Wire Line
+	4200 7350 3850 7350
+Wire Wire Line
+	3850 7350 3850 6950
+Wire Wire Line
+	4650 6650 4650 6250
+Wire Wire Line
+	4650 6250 5000 6250
+Wire Wire Line
+	5000 6150 5000 6350
+Wire Wire Line
+	5000 7250 5000 7450
+Wire Wire Line
+	5000 7350 4650 7350
+Wire Wire Line
+	4650 7350 4650 6950
+Wire Wire Line
+	5450 6650 5450 6250
+Wire Wire Line
+	5450 6250 5800 6250
+Wire Wire Line
+	5800 6150 5800 6350
+Wire Wire Line
+	5800 7250 5800 7450
+Wire Wire Line
+	5800 7350 5450 7350
+Wire Wire Line
+	5450 7350 5450 6950
+Wire Wire Line
+	6250 6650 6250 6250
+Wire Wire Line
+	6250 6250 6600 6250
+Wire Wire Line
+	6600 6150 6600 6350
+Wire Wire Line
+	6600 7250 6600 7450
+Wire Wire Line
+	6600 7350 6250 7350
+Wire Wire Line
+	6250 7350 6250 6950
+Wire Wire Line
+	5700 950  5700 2950
+Wire Wire Line
+	7700 2950 7750 2950
+Wire Wire Line
+	7750 2950 7750 3300
+Wire Wire Line
+	1600 3300 1600 3750
+Wire Wire Line
+	6050 5750 3050 5750
+Wire Wire Line
+	6050 3750 6050 5750
+Wire Wire Line
+	8100 4700 6650 4700
+Wire Wire Line
+	6650 4700 6650 4950
+$Comp
+L Touch_Drum_V1-rescue:GND- #PWR?
+U 1 1 568A29A6
+P 1000 7450
+F 0 "#PWR?" H 1000 7200 50  0001 C CNN
+F 1 "GND" H 1000 7300 50  0000 C CNN
+F 2 "" H 1000 7450 50  0000 C CNN
+F 3 "" H 1000 7450 50  0000 C CNN
+	1    1000 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:GND- #PWR?
+U 1 1 568A2A18
+P 1800 7450
+F 0 "#PWR?" H 1800 7200 50  0001 C CNN
+F 1 "GND" H 1800 7300 50  0000 C CNN
+F 2 "" H 1800 7450 50  0000 C CNN
+F 3 "" H 1800 7450 50  0000 C CNN
+	1    1800 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:GND- #PWR?
+U 1 1 568A2A83
+P 2600 7450
+F 0 "#PWR?" H 2600 7200 50  0001 C CNN
+F 1 "GND" H 2600 7300 50  0000 C CNN
+F 2 "" H 2600 7450 50  0000 C CNN
+F 3 "" H 2600 7450 50  0000 C CNN
+	1    2600 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:GND- #PWR?
+U 1 1 568A2A89
+P 3400 7450
+F 0 "#PWR?" H 3400 7200 50  0001 C CNN
+F 1 "GND" H 3400 7300 50  0000 C CNN
+F 2 "" H 3400 7450 50  0000 C CNN
+F 3 "" H 3400 7450 50  0000 C CNN
+	1    3400 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:GND- #PWR?
+U 1 1 568A2B8F
+P 4200 7450
+F 0 "#PWR?" H 4200 7200 50  0001 C CNN
+F 1 "GND" H 4200 7300 50  0000 C CNN
+F 2 "" H 4200 7450 50  0000 C CNN
+F 3 "" H 4200 7450 50  0000 C CNN
+	1    4200 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:GND- #PWR?
+U 1 1 568A2B95
+P 5000 7450
+F 0 "#PWR?" H 5000 7200 50  0001 C CNN
+F 1 "GND" H 5000 7300 50  0000 C CNN
+F 2 "" H 5000 7450 50  0000 C CNN
+F 3 "" H 5000 7450 50  0000 C CNN
+	1    5000 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:GND- #PWR?
+U 1 1 568A2B9B
+P 5800 7450
+F 0 "#PWR?" H 5800 7200 50  0001 C CNN
+F 1 "GND" H 5800 7300 50  0000 C CNN
+F 2 "" H 5800 7450 50  0000 C CNN
+F 3 "" H 5800 7450 50  0000 C CNN
+	1    5800 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:GND- #PWR?
+U 1 1 568A2BA1
+P 6600 7450
+F 0 "#PWR?" H 6600 7200 50  0001 C CNN
+F 1 "GND" H 6600 7300 50  0000 C CNN
+F 2 "" H 6600 7450 50  0000 C CNN
+F 3 "" H 6600 7450 50  0000 C CNN
+	1    6600 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+5V- #PWR?
+U 1 1 568A2BE7
+P 1800 6150
+F 0 "#PWR?" H 1800 6000 50  0001 C CNN
+F 1 "+5V" H 1800 6290 50  0000 C CNN
+F 2 "" H 1800 6150 50  0000 C CNN
+F 3 "" H 1800 6150 50  0000 C CNN
+	1    1800 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+5V- #PWR?
+U 1 1 568A2C52
+P 2600 6150
+F 0 "#PWR?" H 2600 6000 50  0001 C CNN
+F 1 "+5V" H 2600 6290 50  0000 C CNN
+F 2 "" H 2600 6150 50  0000 C CNN
+F 3 "" H 2600 6150 50  0000 C CNN
+	1    2600 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+5V- #PWR?
+U 1 1 568A2CBD
+P 3400 6150
+F 0 "#PWR?" H 3400 6000 50  0001 C CNN
+F 1 "+5V" H 3400 6290 50  0000 C CNN
+F 2 "" H 3400 6150 50  0000 C CNN
+F 3 "" H 3400 6150 50  0000 C CNN
+	1    3400 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+5V- #PWR?
+U 1 1 568A2D28
+P 4200 6150
+F 0 "#PWR?" H 4200 6000 50  0001 C CNN
+F 1 "+5V" H 4200 6290 50  0000 C CNN
+F 2 "" H 4200 6150 50  0000 C CNN
+F 3 "" H 4200 6150 50  0000 C CNN
+	1    4200 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+5V- #PWR?
+U 1 1 568A2D93
+P 5000 6150
+F 0 "#PWR?" H 5000 6000 50  0001 C CNN
+F 1 "+5V" H 5000 6290 50  0000 C CNN
+F 2 "" H 5000 6150 50  0000 C CNN
+F 3 "" H 5000 6150 50  0000 C CNN
+	1    5000 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+5V- #PWR?
+U 1 1 568A2DFE
+P 5800 6150
+F 0 "#PWR?" H 5800 6000 50  0001 C CNN
+F 1 "+5V" H 5800 6290 50  0000 C CNN
+F 2 "" H 5800 6150 50  0000 C CNN
+F 3 "" H 5800 6150 50  0000 C CNN
+	1    5800 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+5V- #PWR?
+U 1 1 568A2E69
+P 6600 6150
+F 0 "#PWR?" H 6600 6000 50  0001 C CNN
+F 1 "+5V" H 6600 6290 50  0000 C CNN
+F 2 "" H 6600 6150 50  0000 C CNN
+F 3 "" H 6600 6150 50  0000 C CNN
+	1    6600 6150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1000 6250
+Connection ~ 1800 6250
+Connection ~ 2600 6250
+Connection ~ 3400 6250
+Connection ~ 4200 6250
+Connection ~ 5000 6250
+Connection ~ 5800 6250
+Connection ~ 6600 6250
+Connection ~ 6600 7350
+Connection ~ 5800 7350
+Connection ~ 5000 7350
+Connection ~ 4200 7350
+Connection ~ 2600 7350
+Connection ~ 1800 7350
+Connection ~ 1000 7350
+Wire Wire Line
+	3400 7250 3400 7450
+Connection ~ 3400 7350
+Text GLabel 6600 5150 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 1050 4050 0    50   Input ~ 0
+!LED_RST
+Text GLabel 1250 1150 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 1250 2350 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 6250 1150 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 6250 2350 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 6600 3950 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 1600 5150 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 1050 3950 0    50   Input ~ 0
+SPI_SCK
+Wire Wire Line
+	1050 4050 1650 4050
+Text GLabel 1250 1250 0    50   Input ~ 0
+!LED_RST
+Wire Wire Line
+	1250 1250 1300 1250
+Text GLabel 1250 2450 0    50   Input ~ 0
+!LED_RST
+Wire Wire Line
+	1250 2450 1300 2450
+Text GLabel 1600 5250 0    50   Input ~ 0
+!LED_RST
+Wire Wire Line
+	1600 5250 1650 5250
+Text GLabel 6250 2450 0    50   Input ~ 0
+!LED_RST
+Wire Wire Line
+	6250 2450 6300 2450
+Text GLabel 6250 1250 0    50   Input ~ 0
+!LED_RST
+Wire Wire Line
+	6250 1250 6300 1250
+Text GLabel 6600 5250 0    50   Input ~ 0
+!LED_RST
+Wire Wire Line
+	6600 5250 6650 5250
+Text GLabel 6600 4050 0    50   Input ~ 0
+!LED_RST
+Wire Wire Line
+	6600 4050 6650 4050
+Wire Wire Line
+	7750 3300 1600 3300
+$Comp
+L Touch_Drum_V1-rescue:+5V- #PWR?
+U 1 1 56A369B9
+P 1350 3250
+F 0 "#PWR?" H 1350 3100 50  0001 C CNN
+F 1 "+5V" H 1350 3390 50  0000 C CNN
+F 2 "" H 1350 3250 50  0000 C CNN
+F 3 "" H 1350 3250 50  0000 C CNN
+	1    1350 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A36A06
+P 1350 3650
+F 0 "R?" V 1430 3650 50  0000 C CNN
+F 1 "4.7k" V 1350 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 1280 3650 50  0001 C CNN
+F 3 "" H 1350 3650 50  0000 C CNN
+	1    1350 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A36CF0
+P 1200 4600
+F 0 "R?" V 1280 4600 50  0000 C CNN
+F 1 "4.7k" V 1200 4600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 1130 4600 50  0001 C CNN
+F 3 "" H 1200 4600 50  0000 C CNN
+	1    1200 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 3250 1350 3500
+Wire Wire Line
+	1200 4750 1200 4800
+Wire Wire Line
+	1200 4050 1200 4450
+Connection ~ 1200 4050
+$Comp
+L Touch_Drum_V1-rescue:GND- #PWR?
+U 1 1 56A37981
+P 1200 4800
+F 0 "#PWR?" H 1200 4550 50  0001 C CNN
+F 1 "GND" H 1200 4650 50  0000 C CNN
+F 2 "" H 1200 4800 50  0000 C CNN
+F 3 "" H 1200 4800 50  0000 C CNN
+	1    1200 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 3800 1350 4350
+Connection ~ 1350 4350
+Wire Wire Line
+	1600 4950 1600 4700
+Wire Wire Line
+	1600 4700 3100 4700
+Wire Wire Line
+	3100 4700 3100 4550
+Wire Wire Line
+	3100 4550 3050 4550
+Wire Wire Line
+	8050 4550 8100 4550
+Wire Wire Line
+	8100 4550 8100 4700
+Wire Wire Line
+	7700 1750 7750 1750
+Wire Wire Line
+	7750 1750 7750 1900
+Wire Wire Line
+	7750 1900 6250 1900
+Wire Wire Line
+	6250 1900 6250 2150
+Wire Wire Line
+	6250 2150 6300 2150
+Wire Wire Line
+	5700 2950 2700 2950
+Wire Wire Line
+	2700 1750 2750 1750
+Wire Wire Line
+	2750 1750 2750 1900
+Wire Wire Line
+	2750 1900 1250 1900
+Wire Wire Line
+	1250 1900 1250 2150
+Wire Wire Line
+	1250 2150 1300 2150
+Wire Wire Line
+	2700 1550 3050 1550
+Wire Wire Line
+	2700 1450 2750 1450
+Wire Wire Line
+	2700 1350 3050 1350
+Wire Wire Line
+	2700 1250 2750 1250
+Wire Wire Line
+	2700 1150 3050 1150
+Wire Wire Line
+	2700 1050 2750 1050
+Wire Wire Line
+	2700 950  3050 950 
+Wire Wire Line
+	2700 850  2750 850 
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A74AE1
+P 2900 850
+F 0 "R?" V 2980 850 50  0000 C CNN
+F 1 "470" V 2900 850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2830 850 50  0001 C CNN
+F 3 "" H 2900 850 50  0000 C CNN
+	1    2900 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A74BC6
+P 3200 950
+F 0 "R?" V 3280 950 50  0000 C CNN
+F 1 "470" V 3200 950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3130 950 50  0001 C CNN
+F 3 "" H 3200 950 50  0000 C CNN
+	1    3200 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A74C4C
+P 2900 1050
+F 0 "R?" V 2980 1050 50  0000 C CNN
+F 1 "470" V 2900 1050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2830 1050 50  0001 C CNN
+F 3 "" H 2900 1050 50  0000 C CNN
+	1    2900 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A74CE9
+P 2900 1250
+F 0 "R?" V 2980 1250 50  0000 C CNN
+F 1 "470" V 2900 1250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2830 1250 50  0001 C CNN
+F 3 "" H 2900 1250 50  0000 C CNN
+	1    2900 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A74D6F
+P 2900 1450
+F 0 "R?" V 2980 1450 50  0000 C CNN
+F 1 "470" V 2900 1450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2830 1450 50  0001 C CNN
+F 3 "" H 2900 1450 50  0000 C CNN
+	1    2900 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A75052
+P 3200 1150
+F 0 "R?" V 3280 1150 50  0000 C CNN
+F 1 "470" V 3200 1150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3130 1150 50  0001 C CNN
+F 3 "" H 3200 1150 50  0000 C CNN
+	1    3200 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A75138
+P 3200 1350
+F 0 "R?" V 3280 1350 50  0000 C CNN
+F 1 "470" V 3200 1350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3130 1350 50  0001 C CNN
+F 3 "" H 3200 1350 50  0000 C CNN
+	1    3200 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A751D3
+P 3200 1550
+F 0 "R?" V 3280 1550 50  0000 C CNN
+F 1 "470" V 3200 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3130 1550 50  0001 C CNN
+F 3 "" H 3200 1550 50  0000 C CNN
+	1    3200 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 850  3500 850 
+Wire Wire Line
+	3350 950  3500 950 
+Wire Wire Line
+	3500 1050 3050 1050
+Wire Wire Line
+	3350 1150 3500 1150
+Wire Wire Line
+	3500 1250 3050 1250
+Wire Wire Line
+	3350 1350 3500 1350
+Wire Wire Line
+	3500 1450 3050 1450
+Wire Wire Line
+	3350 1550 3500 1550
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A78C70
+P 2950 2050
+F 0 "R?" V 3030 2050 50  0000 C CNN
+F 1 "470" V 2950 2050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2880 2050 50  0001 C CNN
+F 3 "" H 2950 2050 50  0000 C CNN
+	1    2950 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A78C77
+P 3250 2150
+F 0 "R?" V 3330 2150 50  0000 C CNN
+F 1 "470" V 3250 2150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3180 2150 50  0001 C CNN
+F 3 "" H 3250 2150 50  0000 C CNN
+	1    3250 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A78C7E
+P 2950 2250
+F 0 "R?" V 3030 2250 50  0000 C CNN
+F 1 "470" V 2950 2250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2880 2250 50  0001 C CNN
+F 3 "" H 2950 2250 50  0000 C CNN
+	1    2950 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A78C85
+P 2950 2450
+F 0 "R?" V 3030 2450 50  0000 C CNN
+F 1 "470" V 2950 2450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2880 2450 50  0001 C CNN
+F 3 "" H 2950 2450 50  0000 C CNN
+	1    2950 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A78C8C
+P 2950 2650
+F 0 "R?" V 3030 2650 50  0000 C CNN
+F 1 "470" V 2950 2650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2880 2650 50  0001 C CNN
+F 3 "" H 2950 2650 50  0000 C CNN
+	1    2950 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A78C93
+P 3250 2350
+F 0 "R?" V 3330 2350 50  0000 C CNN
+F 1 "470" V 3250 2350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3180 2350 50  0001 C CNN
+F 3 "" H 3250 2350 50  0000 C CNN
+	1    3250 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A78C9A
+P 3250 2550
+F 0 "R?" V 3330 2550 50  0000 C CNN
+F 1 "470" V 3250 2550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3180 2550 50  0001 C CNN
+F 3 "" H 3250 2550 50  0000 C CNN
+	1    3250 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A78CA1
+P 3250 2750
+F 0 "R?" V 3330 2750 50  0000 C CNN
+F 1 "470" V 3250 2750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3180 2750 50  0001 C CNN
+F 3 "" H 3250 2750 50  0000 C CNN
+	1    3250 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 2050 3500 2050
+Wire Wire Line
+	3400 2150 3500 2150
+Wire Wire Line
+	3500 2250 3100 2250
+Wire Wire Line
+	3400 2350 3500 2350
+Wire Wire Line
+	3500 2450 3100 2450
+Wire Wire Line
+	3400 2550 3500 2550
+Wire Wire Line
+	3500 2650 3100 2650
+Wire Wire Line
+	3400 2750 3500 2750
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A793DA
+P 3300 3650
+F 0 "R?" V 3380 3650 50  0000 C CNN
+F 1 "470" V 3300 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3230 3650 50  0001 C CNN
+F 3 "" H 3300 3650 50  0000 C CNN
+	1    3300 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A793E1
+P 3600 3750
+F 0 "R?" V 3680 3750 50  0000 C CNN
+F 1 "470" V 3600 3750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3530 3750 50  0001 C CNN
+F 3 "" H 3600 3750 50  0000 C CNN
+	1    3600 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A793E8
+P 3300 3850
+F 0 "R?" V 3380 3850 50  0000 C CNN
+F 1 "470" V 3300 3850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3230 3850 50  0001 C CNN
+F 3 "" H 3300 3850 50  0000 C CNN
+	1    3300 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A793EF
+P 3300 4050
+F 0 "R?" V 3380 4050 50  0000 C CNN
+F 1 "470" V 3300 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3230 4050 50  0001 C CNN
+F 3 "" H 3300 4050 50  0000 C CNN
+	1    3300 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A793F6
+P 3300 4250
+F 0 "R?" V 3380 4250 50  0000 C CNN
+F 1 "470" V 3300 4250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3230 4250 50  0001 C CNN
+F 3 "" H 3300 4250 50  0000 C CNN
+	1    3300 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A793FD
+P 3600 3950
+F 0 "R?" V 3680 3950 50  0000 C CNN
+F 1 "470" V 3600 3950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3530 3950 50  0001 C CNN
+F 3 "" H 3600 3950 50  0000 C CNN
+	1    3600 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79404
+P 3600 4150
+F 0 "R?" V 3680 4150 50  0000 C CNN
+F 1 "470" V 3600 4150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3530 4150 50  0001 C CNN
+F 3 "" H 3600 4150 50  0000 C CNN
+	1    3600 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7940B
+P 3600 4350
+F 0 "R?" V 3680 4350 50  0000 C CNN
+F 1 "470" V 3600 4350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3530 4350 50  0001 C CNN
+F 3 "" H 3600 4350 50  0000 C CNN
+	1    3600 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 3650 3850 3650
+Wire Wire Line
+	3750 3750 3850 3750
+Wire Wire Line
+	3850 3850 3450 3850
+Wire Wire Line
+	3750 3950 3850 3950
+Wire Wire Line
+	3850 4050 3450 4050
+Wire Wire Line
+	3750 4150 3850 4150
+Wire Wire Line
+	3850 4250 3450 4250
+Wire Wire Line
+	3750 4350 3850 4350
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A796FC
+P 3300 4850
+F 0 "R?" V 3380 4850 50  0000 C CNN
+F 1 "470" V 3300 4850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3230 4850 50  0001 C CNN
+F 3 "" H 3300 4850 50  0000 C CNN
+	1    3300 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79703
+P 3600 4950
+F 0 "R?" V 3680 4950 50  0000 C CNN
+F 1 "470" V 3600 4950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3530 4950 50  0001 C CNN
+F 3 "" H 3600 4950 50  0000 C CNN
+	1    3600 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7970A
+P 3300 5050
+F 0 "R?" V 3380 5050 50  0000 C CNN
+F 1 "470" V 3300 5050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3230 5050 50  0001 C CNN
+F 3 "" H 3300 5050 50  0000 C CNN
+	1    3300 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79711
+P 3300 5250
+F 0 "R?" V 3380 5250 50  0000 C CNN
+F 1 "470" V 3300 5250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3230 5250 50  0001 C CNN
+F 3 "" H 3300 5250 50  0000 C CNN
+	1    3300 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79718
+P 3300 5450
+F 0 "R?" V 3380 5450 50  0000 C CNN
+F 1 "470" V 3300 5450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3230 5450 50  0001 C CNN
+F 3 "" H 3300 5450 50  0000 C CNN
+	1    3300 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7971F
+P 3600 5150
+F 0 "R?" V 3680 5150 50  0000 C CNN
+F 1 "470" V 3600 5150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3530 5150 50  0001 C CNN
+F 3 "" H 3600 5150 50  0000 C CNN
+	1    3600 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79726
+P 3600 5350
+F 0 "R?" V 3680 5350 50  0000 C CNN
+F 1 "470" V 3600 5350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3530 5350 50  0001 C CNN
+F 3 "" H 3600 5350 50  0000 C CNN
+	1    3600 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7972D
+P 3600 5550
+F 0 "R?" V 3680 5550 50  0000 C CNN
+F 1 "470" V 3600 5550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3530 5550 50  0001 C CNN
+F 3 "" H 3600 5550 50  0000 C CNN
+	1    3600 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 4850 3850 4850
+Wire Wire Line
+	3750 4950 3850 4950
+Wire Wire Line
+	3850 5050 3450 5050
+Wire Wire Line
+	3750 5150 3850 5150
+Wire Wire Line
+	3850 5250 3450 5250
+Wire Wire Line
+	3750 5350 3850 5350
+Wire Wire Line
+	3850 5450 3450 5450
+Wire Wire Line
+	3750 5550 3850 5550
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79B06
+P 8300 4850
+F 0 "R?" V 8380 4850 50  0000 C CNN
+F 1 "470" V 8300 4850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8230 4850 50  0001 C CNN
+F 3 "" H 8300 4850 50  0000 C CNN
+	1    8300 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79B0D
+P 8600 4950
+F 0 "R?" V 8680 4950 50  0000 C CNN
+F 1 "470" V 8600 4950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8530 4950 50  0001 C CNN
+F 3 "" H 8600 4950 50  0000 C CNN
+	1    8600 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79B14
+P 8300 5050
+F 0 "R?" V 8380 5050 50  0000 C CNN
+F 1 "470" V 8300 5050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8230 5050 50  0001 C CNN
+F 3 "" H 8300 5050 50  0000 C CNN
+	1    8300 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79B1B
+P 8300 5250
+F 0 "R?" V 8380 5250 50  0000 C CNN
+F 1 "470" V 8300 5250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8230 5250 50  0001 C CNN
+F 3 "" H 8300 5250 50  0000 C CNN
+	1    8300 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79B22
+P 8300 5450
+F 0 "R?" V 8380 5450 50  0000 C CNN
+F 1 "470" V 8300 5450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8230 5450 50  0001 C CNN
+F 3 "" H 8300 5450 50  0000 C CNN
+	1    8300 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79B29
+P 8600 5150
+F 0 "R?" V 8680 5150 50  0000 C CNN
+F 1 "470" V 8600 5150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8530 5150 50  0001 C CNN
+F 3 "" H 8600 5150 50  0000 C CNN
+	1    8600 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79B30
+P 8600 5350
+F 0 "R?" V 8680 5350 50  0000 C CNN
+F 1 "470" V 8600 5350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8530 5350 50  0001 C CNN
+F 3 "" H 8600 5350 50  0000 C CNN
+	1    8600 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79B37
+P 8600 5550
+F 0 "R?" V 8680 5550 50  0000 C CNN
+F 1 "470" V 8600 5550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8530 5550 50  0001 C CNN
+F 3 "" H 8600 5550 50  0000 C CNN
+	1    8600 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8450 4850 8850 4850
+Wire Wire Line
+	8750 4950 8850 4950
+Wire Wire Line
+	8850 5050 8450 5050
+Wire Wire Line
+	8750 5150 8850 5150
+Wire Wire Line
+	8850 5250 8450 5250
+Wire Wire Line
+	8750 5350 8850 5350
+Wire Wire Line
+	8850 5450 8450 5450
+Wire Wire Line
+	8750 5550 8850 5550
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79EA8
+P 8300 3650
+F 0 "R?" V 8380 3650 50  0000 C CNN
+F 1 "470" V 8300 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8230 3650 50  0001 C CNN
+F 3 "" H 8300 3650 50  0000 C CNN
+	1    8300 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79EAF
+P 8600 3750
+F 0 "R?" V 8680 3750 50  0000 C CNN
+F 1 "470" V 8600 3750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8530 3750 50  0001 C CNN
+F 3 "" H 8600 3750 50  0000 C CNN
+	1    8600 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79EB6
+P 8300 3850
+F 0 "R?" V 8380 3850 50  0000 C CNN
+F 1 "470" V 8300 3850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8230 3850 50  0001 C CNN
+F 3 "" H 8300 3850 50  0000 C CNN
+	1    8300 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79EBD
+P 8300 4050
+F 0 "R?" V 8380 4050 50  0000 C CNN
+F 1 "470" V 8300 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8230 4050 50  0001 C CNN
+F 3 "" H 8300 4050 50  0000 C CNN
+	1    8300 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79EC4
+P 8300 4250
+F 0 "R?" V 8380 4250 50  0000 C CNN
+F 1 "470" V 8300 4250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8230 4250 50  0001 C CNN
+F 3 "" H 8300 4250 50  0000 C CNN
+	1    8300 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79ECB
+P 8600 3950
+F 0 "R?" V 8680 3950 50  0000 C CNN
+F 1 "470" V 8600 3950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8530 3950 50  0001 C CNN
+F 3 "" H 8600 3950 50  0000 C CNN
+	1    8600 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79ED2
+P 8600 4150
+F 0 "R?" V 8680 4150 50  0000 C CNN
+F 1 "470" V 8600 4150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8530 4150 50  0001 C CNN
+F 3 "" H 8600 4150 50  0000 C CNN
+	1    8600 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A79ED9
+P 8600 4350
+F 0 "R?" V 8680 4350 50  0000 C CNN
+F 1 "470" V 8600 4350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8530 4350 50  0001 C CNN
+F 3 "" H 8600 4350 50  0000 C CNN
+	1    8600 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8450 3650 8850 3650
+Wire Wire Line
+	8750 3750 8850 3750
+Wire Wire Line
+	8850 3850 8450 3850
+Wire Wire Line
+	8750 3950 8850 3950
+Wire Wire Line
+	8850 4050 8450 4050
+Wire Wire Line
+	8750 4150 8850 4150
+Wire Wire Line
+	8850 4250 8450 4250
+Wire Wire Line
+	8750 4350 8850 4350
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A1A2
+P 7950 2050
+F 0 "R?" V 8030 2050 50  0000 C CNN
+F 1 "470" V 7950 2050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7880 2050 50  0001 C CNN
+F 3 "" H 7950 2050 50  0000 C CNN
+	1    7950 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A1A9
+P 8250 2150
+F 0 "R?" V 8330 2150 50  0000 C CNN
+F 1 "470" V 8250 2150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8180 2150 50  0001 C CNN
+F 3 "" H 8250 2150 50  0000 C CNN
+	1    8250 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A1B0
+P 7950 2250
+F 0 "R?" V 8030 2250 50  0000 C CNN
+F 1 "470" V 7950 2250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7880 2250 50  0001 C CNN
+F 3 "" H 7950 2250 50  0000 C CNN
+	1    7950 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A1B7
+P 7950 2450
+F 0 "R?" V 8030 2450 50  0000 C CNN
+F 1 "470" V 7950 2450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7880 2450 50  0001 C CNN
+F 3 "" H 7950 2450 50  0000 C CNN
+	1    7950 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A1BE
+P 7950 2650
+F 0 "R?" V 8030 2650 50  0000 C CNN
+F 1 "470" V 7950 2650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7880 2650 50  0001 C CNN
+F 3 "" H 7950 2650 50  0000 C CNN
+	1    7950 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A1C5
+P 8250 2350
+F 0 "R?" V 8330 2350 50  0000 C CNN
+F 1 "470" V 8250 2350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8180 2350 50  0001 C CNN
+F 3 "" H 8250 2350 50  0000 C CNN
+	1    8250 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A1CC
+P 8250 2550
+F 0 "R?" V 8330 2550 50  0000 C CNN
+F 1 "470" V 8250 2550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8180 2550 50  0001 C CNN
+F 3 "" H 8250 2550 50  0000 C CNN
+	1    8250 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A1D3
+P 8250 2750
+F 0 "R?" V 8330 2750 50  0000 C CNN
+F 1 "470" V 8250 2750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8180 2750 50  0001 C CNN
+F 3 "" H 8250 2750 50  0000 C CNN
+	1    8250 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8100 2050 8500 2050
+Wire Wire Line
+	8400 2150 8500 2150
+Wire Wire Line
+	8500 2250 8100 2250
+Wire Wire Line
+	8400 2350 8500 2350
+Wire Wire Line
+	8500 2450 8100 2450
+Wire Wire Line
+	8400 2550 8500 2550
+Wire Wire Line
+	8500 2650 8100 2650
+Wire Wire Line
+	8400 2750 8500 2750
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A524
+P 7950 850
+F 0 "R?" V 8030 850 50  0000 C CNN
+F 1 "470" V 7950 850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7880 850 50  0001 C CNN
+F 3 "" H 7950 850 50  0000 C CNN
+	1    7950 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A52B
+P 8250 950
+F 0 "R?" V 8330 950 50  0000 C CNN
+F 1 "470" V 8250 950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8180 950 50  0001 C CNN
+F 3 "" H 8250 950 50  0000 C CNN
+	1    8250 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A532
+P 7950 1050
+F 0 "R?" V 8030 1050 50  0000 C CNN
+F 1 "470" V 7950 1050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7880 1050 50  0001 C CNN
+F 3 "" H 7950 1050 50  0000 C CNN
+	1    7950 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A539
+P 7950 1250
+F 0 "R?" V 8030 1250 50  0000 C CNN
+F 1 "470" V 7950 1250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7880 1250 50  0001 C CNN
+F 3 "" H 7950 1250 50  0000 C CNN
+	1    7950 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A540
+P 7950 1450
+F 0 "R?" V 8030 1450 50  0000 C CNN
+F 1 "470" V 7950 1450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7880 1450 50  0001 C CNN
+F 3 "" H 7950 1450 50  0000 C CNN
+	1    7950 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A547
+P 8250 1150
+F 0 "R?" V 8330 1150 50  0000 C CNN
+F 1 "470" V 8250 1150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8180 1150 50  0001 C CNN
+F 3 "" H 8250 1150 50  0000 C CNN
+	1    8250 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A54E
+P 8250 1350
+F 0 "R?" V 8330 1350 50  0000 C CNN
+F 1 "470" V 8250 1350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8180 1350 50  0001 C CNN
+F 3 "" H 8250 1350 50  0000 C CNN
+	1    8250 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:R- R?
+U 1 1 56A7A555
+P 8250 1550
+F 0 "R?" V 8330 1550 50  0000 C CNN
+F 1 "470" V 8250 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8180 1550 50  0001 C CNN
+F 3 "" H 8250 1550 50  0000 C CNN
+	1    8250 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8100 850  8500 850 
+Wire Wire Line
+	8400 950  8500 950 
+Wire Wire Line
+	8500 1050 8100 1050
+Wire Wire Line
+	8400 1150 8500 1150
+Wire Wire Line
+	8500 1250 8100 1250
+Wire Wire Line
+	8400 1350 8500 1350
+Wire Wire Line
+	8500 1450 8100 1450
+Wire Wire Line
+	8400 1550 8500 1550
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 56A7BE5C
+P 4550 1200
+F 0 "P?" H 4550 1650 50  0000 C CNN
+F 1 "CONN_01X08" V 4650 1200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 4550 1200 50  0001 C CNN
+F 3 "" H 4550 1200 50  0000 C CNN
+	1    4550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 56A7C5E1
+P 4550 2400
+F 0 "P?" H 4550 2850 50  0000 C CNN
+F 1 "CONN_01X08" V 4650 2400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 4550 2400 50  0001 C CNN
+F 3 "" H 4550 2400 50  0000 C CNN
+	1    4550 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 850  4250 850 
+Wire Wire Line
+	4250 850  4250 2750
+Wire Wire Line
+	4250 2750 4350 2750
+Wire Wire Line
+	4350 2650 4250 2650
+Connection ~ 4250 2650
+Wire Wire Line
+	4350 2550 4250 2550
+Connection ~ 4250 2550
+Wire Wire Line
+	4350 2450 4250 2450
+Connection ~ 4250 2450
+Wire Wire Line
+	4350 2350 4250 2350
+Connection ~ 4250 2350
+Wire Wire Line
+	4350 2250 4250 2250
+Connection ~ 4250 2250
+Wire Wire Line
+	4350 2150 4250 2150
+Connection ~ 4250 2150
+Wire Wire Line
+	4350 2050 4250 2050
+Connection ~ 4250 2050
+Wire Wire Line
+	4250 1800 4150 1800
+Connection ~ 4250 1800
+Wire Wire Line
+	4350 1550 4250 1550
+Connection ~ 4250 1550
+Wire Wire Line
+	4350 1450 4250 1450
+Connection ~ 4250 1450
+Wire Wire Line
+	4350 1350 4250 1350
+Connection ~ 4250 1350
+Wire Wire Line
+	4350 1250 4250 1250
+Connection ~ 4250 1250
+Wire Wire Line
+	4350 1150 4250 1150
+Connection ~ 4250 1150
+Wire Wire Line
+	4350 1050 4250 1050
+Connection ~ 4250 1050
+Wire Wire Line
+	4350 950  4250 950 
+Connection ~ 4250 950 
+Text GLabel 4150 1800 0    50   Input ~ 0
+LED_BUS
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 56A7F6B8
+P 9550 1200
+F 0 "P?" H 9550 1650 50  0000 C CNN
+F 1 "CONN_01X08" V 9650 1200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 9550 1200 50  0001 C CNN
+F 3 "" H 9550 1200 50  0000 C CNN
+	1    9550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 56A7F6BE
+P 9550 2400
+F 0 "P?" H 9550 2850 50  0000 C CNN
+F 1 "CONN_01X08" V 9650 2400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 9550 2400 50  0001 C CNN
+F 3 "" H 9550 2400 50  0000 C CNN
+	1    9550 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 850  9250 850 
+Wire Wire Line
+	9250 850  9250 2750
+Wire Wire Line
+	9250 2750 9350 2750
+Wire Wire Line
+	9350 2650 9250 2650
+Connection ~ 9250 2650
+Wire Wire Line
+	9350 2550 9250 2550
+Connection ~ 9250 2550
+Wire Wire Line
+	9350 2450 9250 2450
+Connection ~ 9250 2450
+Wire Wire Line
+	9350 2350 9250 2350
+Connection ~ 9250 2350
+Wire Wire Line
+	9350 2250 9250 2250
+Connection ~ 9250 2250
+Wire Wire Line
+	9350 2150 9250 2150
+Connection ~ 9250 2150
+Wire Wire Line
+	9350 2050 9250 2050
+Connection ~ 9250 2050
+Wire Wire Line
+	9250 1800 9150 1800
+Connection ~ 9250 1800
+Wire Wire Line
+	9350 1550 9250 1550
+Connection ~ 9250 1550
+Wire Wire Line
+	9350 1450 9250 1450
+Connection ~ 9250 1450
+Wire Wire Line
+	9350 1350 9250 1350
+Connection ~ 9250 1350
+Wire Wire Line
+	9350 1250 9250 1250
+Connection ~ 9250 1250
+Wire Wire Line
+	9350 1150 9250 1150
+Connection ~ 9250 1150
+Wire Wire Line
+	9350 1050 9250 1050
+Connection ~ 9250 1050
+Wire Wire Line
+	9350 950  9250 950 
+Connection ~ 9250 950 
+Text GLabel 9150 1800 0    50   Input ~ 0
+LED_BUS
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 56A784CD
+P 4900 4000
+F 0 "P?" H 4900 4450 50  0000 C CNN
+F 1 "CONN_01X08" V 5000 4000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 4900 4000 50  0001 C CNN
+F 3 "" H 4900 4000 50  0000 C CNN
+	1    4900 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 56A784D4
+P 4900 5200
+F 0 "P?" H 4900 5650 50  0000 C CNN
+F 1 "CONN_01X08" V 5000 5200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 4900 5200 50  0001 C CNN
+F 3 "" H 4900 5200 50  0000 C CNN
+	1    4900 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3650 4600 3650
+Wire Wire Line
+	4600 3650 4600 5550
+Wire Wire Line
+	4600 5550 4700 5550
+Wire Wire Line
+	4700 5450 4600 5450
+Connection ~ 4600 5450
+Wire Wire Line
+	4700 5350 4600 5350
+Connection ~ 4600 5350
+Wire Wire Line
+	4700 5250 4600 5250
+Connection ~ 4600 5250
+Wire Wire Line
+	4700 5150 4600 5150
+Connection ~ 4600 5150
+Wire Wire Line
+	4700 5050 4600 5050
+Connection ~ 4600 5050
+Wire Wire Line
+	4700 4950 4600 4950
+Connection ~ 4600 4950
+Wire Wire Line
+	4700 4850 4600 4850
+Connection ~ 4600 4850
+Wire Wire Line
+	4600 4600 4500 4600
+Connection ~ 4600 4600
+Wire Wire Line
+	4700 4350 4600 4350
+Connection ~ 4600 4350
+Wire Wire Line
+	4700 4250 4600 4250
+Connection ~ 4600 4250
+Wire Wire Line
+	4700 4150 4600 4150
+Connection ~ 4600 4150
+Wire Wire Line
+	4700 4050 4600 4050
+Connection ~ 4600 4050
+Wire Wire Line
+	4700 3950 4600 3950
+Connection ~ 4600 3950
+Wire Wire Line
+	4700 3850 4600 3850
+Connection ~ 4600 3850
+Wire Wire Line
+	4700 3750 4600 3750
+Connection ~ 4600 3750
+Text GLabel 4500 4600 0    50   Input ~ 0
+LED_BUS
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 56A78615
+P 9800 3950
+F 0 "P?" H 9800 4400 50  0000 C CNN
+F 1 "CONN_01X08" V 9900 3950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 9800 3950 50  0001 C CNN
+F 3 "" H 9800 3950 50  0000 C CNN
+	1    9800 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X08- P?
+U 1 1 56A7861C
+P 9800 5150
+F 0 "P?" H 9800 5600 50  0000 C CNN
+F 1 "CONN_01X08" V 9900 5150 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 9800 5150 50  0001 C CNN
+F 3 "" H 9800 5150 50  0000 C CNN
+	1    9800 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 3600 9500 3600
+Wire Wire Line
+	9500 3600 9500 5500
+Wire Wire Line
+	9500 5500 9600 5500
+Wire Wire Line
+	9600 5400 9500 5400
+Connection ~ 9500 5400
+Wire Wire Line
+	9600 5300 9500 5300
+Connection ~ 9500 5300
+Wire Wire Line
+	9600 5200 9500 5200
+Connection ~ 9500 5200
+Wire Wire Line
+	9600 5100 9500 5100
+Connection ~ 9500 5100
+Wire Wire Line
+	9600 5000 9500 5000
+Connection ~ 9500 5000
+Wire Wire Line
+	9600 4900 9500 4900
+Connection ~ 9500 4900
+Wire Wire Line
+	9600 4800 9500 4800
+Connection ~ 9500 4800
+Wire Wire Line
+	9500 4550 9400 4550
+Connection ~ 9500 4550
+Wire Wire Line
+	9600 4300 9500 4300
+Connection ~ 9500 4300
+Wire Wire Line
+	9600 4200 9500 4200
+Connection ~ 9500 4200
+Wire Wire Line
+	9600 4100 9500 4100
+Connection ~ 9500 4100
+Wire Wire Line
+	9600 4000 9500 4000
+Connection ~ 9500 4000
+Wire Wire Line
+	9600 3900 9500 3900
+Connection ~ 9500 3900
+Wire Wire Line
+	9600 3800 9500 3800
+Connection ~ 9500 3800
+Wire Wire Line
+	9600 3700 9500 3700
+Connection ~ 9500 3700
+Text GLabel 9400 4550 0    50   Input ~ 0
+LED_BUS
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X01- P?
+U 1 1 56A7E7A0
+P 8200 6100
+F 0 "P?" H 8200 6200 50  0000 C CNN
+F 1 "CONN_01X01" V 8300 6100 50  0001 C CNN
+F 2 "SparkFun-Footprints:PTH_LUG_.05" H 8200 6100 50  0001 C CNN
+F 3 "" H 8200 6100 50  0000 C CNN
+	1    8200 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X01- P?
+U 1 1 56A7E7A7
+P 8200 6300
+F 0 "P?" H 8200 6400 50  0000 C CNN
+F 1 "CONN_01X01" V 8300 6300 50  0001 C CNN
+F 2 "SparkFun-Footprints:PTH_LUG_.05" H 8200 6300 50  0001 C CNN
+F 3 "" H 8200 6300 50  0000 C CNN
+	1    8200 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 6300 8000 6300
+Wire Wire Line
+	7900 6100 8000 6100
+Text GLabel 7900 6100 0    50   Input ~ 0
+LED_BUS
+Text GLabel 7900 6300 0    50   Input ~ 0
+LED_BUS
+$Comp
+L Touch_Drum_V1-rescue:CONN_01X05- P?
+U 1 1 56B72D95
+P 9800 6150
+F 0 "P?" H 9800 6450 50  0000 C CNN
+F 1 "CONN_01X05" V 9900 6150 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05" H 9800 6150 50  0001 C CNN
+F 3 "" H 9800 6150 50  0000 C CNN
+	1    9800 6150
+	1    0    0    -1  
+$EndComp
+Text GLabel 9400 6350 0    50   Input ~ 0
+LED_LATCH
+Text GLabel 9400 6250 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 9400 6150 0    50   Input ~ 0
+!LED_RST
+Text GLabel 9400 6050 0    50   Input ~ 0
+LED_OE
+Wire Wire Line
+	8050 5750 8800 5750
+Wire Wire Line
+	8800 5750 8800 5950
+Wire Wire Line
+	8800 5950 9600 5950
+Wire Wire Line
+	9400 6050 9600 6050
+Wire Wire Line
+	9400 6150 9600 6150
+Wire Wire Line
+	9400 6250 9600 6250
+Wire Wire Line
+	9400 6350 9600 6350
+$EndSCHEMATC

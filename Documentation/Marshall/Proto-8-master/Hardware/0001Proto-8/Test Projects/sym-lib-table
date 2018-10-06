@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Teensy_test_layout-rescue)(type Legacy)(uri ${KIPRJMOD}/Teensy_test_layout-rescue.lib)(options "")(descr ""))
+)
