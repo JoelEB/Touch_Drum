@@ -30,6 +30,9 @@
 #include <SerialFlash.h>
 #include <Bounce.h>
 #include <MAX17043GU.h>
+#include <MIDI.h>
+#include "nrf52.h"
+#include <BLEPeripheral.h>
 
 #define MAX17043_ADDRESS 0x36
 
@@ -68,6 +71,16 @@ TeensyView oled(PIN_RESET, PIN_DC, PIN_CS, PIN_SCK, PIN_MOSI);
 
 //Instantiate FuelGauge object
 MAX17043GU battery;
+
+/////////////////BLE////////////////////////////////
+// create peripheral instance
+//const char * localName = "nRF52832 MIDI";
+BLEPeripheral blePeripheral;
+BLEService service("03B80E5A-EDE8-4B33-A751-6CE34EC4C700");
+BLECharacteristic characteristic("7772E5DB-3868-4112-A1A9-F2669D106BF3", BLERead | BLEWriteWithoutResponse | BLENotify, 20 );
+BLEDescriptor descriptor = BLEDescriptor("2902", 0);
+
+MIDI_CREATE_INSTANCE(HardwareSerial, Serial, MIDI);
 
 ///////////////Potentieometrs
 #define volKnob A13 //grey wire 
@@ -162,6 +175,17 @@ void setup()
   //Initialize Decay Knob
   dcVal = map(analogRead(decayKnob), 0, 1023, 2, 1000);
 
+  setupBLE();
+
+  // Initiate MIDI communications, listen to all channels
+  MIDI.begin(MIDI_CHANNEL_OMNI);
+  MIDI.turnThruOff();
+  
+  // The nRF52832 converts baud settings to the discrete standard rates.
+  // Use the nrf52.h names to write a custom value, 0x7FFC80 after beginning midi
+  NRF_UARTE_Type * myUart;
+  myUart = (NRF_UARTE_Type *)NRF_UART0_BASE;
+  myUart->BAUDRATE = 0x7FFC80;
   
   //Initialize the OLED
   oled.begin();
@@ -942,4 +966,22 @@ void changeScale()
       midiNote[6] = midiRoot+18;
       midiNote[7] = midiRoot+19;
   }  
+}
+/////////////////////////////////////////////////////
+void setupBLE()
+{
+  blePeripheral.setLocalName("nRF52832 MIDI"); //local name sometimes used by central
+  blePeripheral.setDeviceName("nRF52832 MIDI"); //device name sometimes used by central
+  //blePeripheral.setApperance(0x0000); //default is 0x0000, what should this be?
+  blePeripheral.setAdvertisedServiceUuid(service.uuid()); //Advertise MIDI UUID
+
+  // add attributes (services, characteristics, descriptors) to peripheral
+  blePeripheral.addAttribute(service);
+  blePeripheral.addAttribute(characteristic);
+  blePeripheral.addAttribute(descriptor);
+
+  // set initial value
+  characteristic.setValue(0);
+
+  blePeripheral.begin();
 }

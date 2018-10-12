@@ -23,20 +23,20 @@
   Distributed as-is; no warranty is given.
 *******************************************************************************/
 //These libraries are included by the Teensy Audio System Design Tool 
-#include <Audio.h>
+#include <Audio2.h>
 #include <SPI.h>
-#include <Wire.h>
+#include "i2c_t3.h"
 #include <TeensyView.h>
 #include <SerialFlash.h>
 #include <Bounce.h>
-#include <MAX17043GU.h>
-
-#define MAX17043_ADDRESS 0x36
-
+#include <MAX17043GU_AltI2C.h>
 #include "note_frequency.h"
 #include "TeensyAudioDesignTool.h"
 
+//Change this to 1 for serial.print data
 #define serialDebug 0
+
+#define MAX17043_ADDRESS 0x36
 
 //////////ARRAYS////////////////
 
@@ -47,11 +47,11 @@ int midiNoteFlag[] = {0,0,0,0,0,0,0,0};
 
 //CAP TOUCH PINS
 //Milled proto pinout
-//int pinTouch[] = {17,32,19,33,1,15,18,16,0,25};
+int pinTouch[] = {17,32,19,33,1,15,18,16,0,25};
 //Touch Drum pinout
-int pinTouch[] = {0,1,15,16,17,25,32,33};
+//int pinTouch[] = {0,1,15,16,17,18,19,25,32,33};
 
-int touchThreshold[] = {1900,1900,2100,1900,1900,1900,1900,1900,1900,1900};
+int touchThreshold[] = {1300,1300,1300,1300,1300,1300,1300,1300,1300,1300};
 
 int scale[8];//holds current scale frequency values 
 int midiNote[8]; //holds curren scale's MIDI values 
@@ -88,35 +88,51 @@ float percentage;
 int battCounter = 0;
 
 bool OLEDdebug = 0; 
-/////////////////BUTTONS/////////////
-//buttons for incrementing or decrementing through each scale
-Bounce button0 = Bounce(4, 15);
-Bounce button1 = Bounce(3, 15);    
+//////////////////CAP TOUCH BUTTONS/////////////
+int buttonLeft = pinTouch[8];
+int buttonRight = pinTouch[9];
+
+int leftThreshold = touchThreshold[8];
+int rightThreshold = touchThreshold[9];
+
+//int buttonLeftState = 0; // the current state of the output pin  
+//int buttonRightState = 0; // the current state of the output pin  
+
+int touchReadingLeft; // the current reading from the input pin  
+int previousTouchReadingLeft; // the previous reading from the input pin  
+
+int touchReadingRight; // the current reading from the input pin  
+int previousTouchReadingRight; // the previous reading from the input pin 
+
+// the follow variables are long's because the time, measured in milliseconds  
+// will quickly become a bigger number than can be stored in an int.  
+long previousTimeLeft = 0;                   // the last time the output pin was toggled  
+long previousTimeRight = 0; 
+uint8_t debounce = 200; 
+
+/////////////////FOOT PEDAL BUTTONS/////////////
+//Optional Foot pedal buttons for changing octaves    
 Bounce foot0 = Bounce(5, 30);
-Bounce foot1 = Bounce(8, 30);  
+Bounce foot1 = Bounce(8, 30); 
 
 ////////////////////CHANGE THIS WHEN ADDING MORE SCALES
 int numOfScales = 10 ;//indexed at zero (subtract 1) 
 ////////////////////////////////////////////////////////
 void setup() 
 {
-  if(serialDebug == 1)
+  if(serialDebug ==1)
   {
     Serial.begin(115200);
   }
-  
+
   // Start I2C
-  Wire.begin();
+  Wire1.begin();
   delay(100);
   battery.restart();
 
-  //initialize buttons
-  pinMode(4, INPUT_PULLUP);
-  pinMode(3, INPUT_PULLUP);
+  //initialize foot pedal buttons
   pinMode(5, INPUT_PULLUP);
   pinMode(8, INPUT_PULLUP);
-  button0.update();
-  button1.update();
   foot0.update();
   foot1.update();
   
@@ -162,6 +178,8 @@ void setup()
   //Initialize Decay Knob
   dcVal = map(analogRead(decayKnob), 0, 1023, 2, 1000);
 
+  previousTouchReadingLeft = touchRead(buttonLeft);
+  previousTouchReadingRight = touchRead(buttonRight);
   
   //Initialize the OLED
   oled.begin();
@@ -174,7 +192,6 @@ void setup()
   // Give the splash screen some time to shine (Splachscreen array lives inside the TeensyView.cpp file)
   delay(5000);
 
-
 }
 //////////////////////////////////////////////
 void loop() 
@@ -183,9 +200,9 @@ void loop()
    
   dcValCheck();//check the decay knob
 
-  buttonCheck();//check for button presses to change the scale 
-
   touchCheck();//check if any of the capacitive pads have been touched
+
+  //footButtonCheck();
 
   battCounter++;
   if(battCounter == 10000);//don't check battery all the time, slows opperation
@@ -208,7 +225,7 @@ void volumeCheck()
   
   float newReading = (float)analogRead(volKnob) / 1280.0;
   
-  if( vol != newReading )
+  if( vol != newReading || vol != newReading-1 || vol != newReading+1 )
   {
     vol = newReading;
     mixerMain.gain(0, vol);
@@ -314,16 +331,17 @@ void oledPrint()
       oled.print("%  Oct:");
       oled.print(octave_index);
   }
- 
+  
+  
   oled.setCursor(0, 24);
   oled.print("Batt = ");  
   oled.print(percentage);
   oled.print("% ");
   oled.print(voltage);
   oled.print("V");
-  
   oled.display();
   
+ oled.display();
   delay(10);
 }
 /////////////////////////////////////////////////////
@@ -617,26 +635,22 @@ void touchCheck()
       }  
     }   
   }//end for loop
-    
-    while (usbMIDI.read()) {
-    // ignore incoming messages
-  }
-}
-//////////////////////////////////////////////////
-void buttonCheck()
-{
-  button0.update();
-  button1.update();
-  foot0.update();
-  foot1.update();
 
-  //if button 0 is pressed, increment the scale being used
-  if (button0.fallingEdge() && button1.fallingEdge())
-  {
-     OLEDdebug = !OLEDdebug;
-  }
-  if (button0.fallingEdge())
-  { 
+//unsigned long timeNow = millis();
+
+   //Check the remaining two cap tuch buttons to see if new settings are desired
+    touchReadingLeft = touchRead(buttonLeft);
+    touchReadingRight = touchRead(buttonRight);
+    
+    if (touchReadingLeft > leftThreshold && previousTouchReadingLeft < leftThreshold && millis() - previousTimeLeft > debounce 
+     && touchReadingRight > rightThreshold && previousTouchReadingRight < rightThreshold  && millis() - previousTimeRight > debounce)
+    {
+       OLEDdebug = !OLEDdebug;
+    }
+
+    if (touchReadingLeft > leftThreshold && previousTouchReadingLeft < leftThreshold && millis() - previousTimeLeft > debounce)
+    {
+      
       note_index++;//increment note index which changes the root note of each scale
       midi_index++;//increment MIDI index which changes the root of the MIDI notes sent
       //there is no decrement
@@ -665,11 +679,14 @@ void buttonCheck()
       
       changeScale();//change to Key with new parameters 
 
-  }
+      previousTimeLeft = millis();
+    }
+    
+    previousTouchReadingLeft = touchReadingLeft;
 
-  //if button 1 is pressed, decrement the scale being used
-  if (button1.fallingEdge())
-  { 
+
+    if (touchReadingRight > rightThreshold && previousTouchReadingRight < rightThreshold && millis() - previousTimeRight > debounce)
+    {
       scale_index++;//increment scale index which changes the scale to be played
       //there is no decrement
   
@@ -690,24 +707,14 @@ void buttonCheck()
       octave_index = 0;//set the octave index back to 0 everytime a new scale is selected
       
       changeScale();//change to scale with new parameters 
-  }
-
-  //if foot pedal 0 is pressed, increment the octave 
-  if (foot0.risingEdge())
-  { 
-    octave_index++;
-
-    if(octave_index > 2)
-    octave_index = 2;
-  }
-
-  //if button 1 is pressed, decrement the scale being used
-  if (foot1.risingEdge())
-  { 
-    octave_index--;
-
-    if(octave_index < -2)
-    octave_index = -2;
+      
+      previousTimeRight = millis();
+    }
+    
+    previousTouchReadingRight = touchReadingRight;
+    
+    while (usbMIDI.read()) {
+    // ignore incoming messages
   }
 }
 /////////////////////////////////////////////////////
@@ -942,4 +949,30 @@ void changeScale()
       midiNote[6] = midiRoot+18;
       midiNote[7] = midiRoot+19;
   }  
+}
+//////////////////////////////////////////////////
+void footButtonCheck()
+{
+  foot0.update();
+  foot1.update();
+
+  //if foot pedal 0 is pressed, increment the octave 
+  if (foot0.risingEdge())
+  { 
+    octave_index++;
+
+    if(octave_index > 2)
+    octave_index = 2;
+  }
+
+  //if button 1 is pressed, decrement the scale being used
+  if (foot1.risingEdge())
+  { 
+    octave_index--;
+
+    if(octave_index < -2)
+    octave_index = -2;
+  }
+  
+
 }
