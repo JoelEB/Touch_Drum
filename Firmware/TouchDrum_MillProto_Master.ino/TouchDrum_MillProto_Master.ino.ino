@@ -78,6 +78,8 @@ int scale_index = 0;//var to keep track of which scale is being used
 int note_index = 57;//picks a frequency from the table in note_frequecy.h; starts at 220H A index 57
 int midi_index = 33;//picks MIDI note to play from table in note_frequency.h 
 int octave_index = 0;//keeps track of which octave should be played
+int wave_index = -1;//var to keep track of which wave is being used
+int numOfWaves = 3;//4-1=3
 
 float vol = 0;
 int dcVal = 0;//value to control the decay of each note 
@@ -139,21 +141,30 @@ void setup()
   //set aside audio memory 
   AudioMemory(64);
 
+
   //initialize audio settings
+  sine1.begin(WAVEFORM_SINE);
   sine1.amplitude(0.125);
   sine1.frequency(440);
+  sine2.begin(WAVEFORM_SINE);
   sine2.amplitude(0.125);
   sine2.frequency(440);
+  sine3.begin(WAVEFORM_SINE);
   sine3.amplitude(0.125);
   sine3.frequency(440);
+  sine4.begin(WAVEFORM_SINE);
   sine4.amplitude(0.125);
   sine4.frequency(440);
+  sine5.begin(WAVEFORM_SINE);
   sine5.amplitude(0.125);
   sine5.frequency(440);
+  sine6.begin(WAVEFORM_SINE);
   sine6.amplitude(0.125);
   sine6.frequency(440);
+  sine7.begin(WAVEFORM_SINE);
   sine7.amplitude(0.125);
   sine7.frequency(440);
+  sine8.begin(WAVEFORM_SINE);
   sine8.amplitude(0.125);
   sine8.frequency(440);
   
@@ -348,7 +359,7 @@ void oledPrint()
 
 void serialDebugPrint()
 {
-  for(int i =0; i<=9; i++)
+  for(int i =0; i<=9; i++) //print values for all 10 touch pads
   {
     Serial.print("Pad");
     Serial.print(i+1);
@@ -645,7 +656,71 @@ void touchCheck()
     if (touchReadingLeft > leftThreshold && previousTouchReadingLeft < leftThreshold && millis() - previousTimeLeft > debounce 
      && touchReadingRight > rightThreshold && previousTouchReadingRight < rightThreshold  && millis() - previousTimeRight > debounce)
     {
-       OLEDdebug = !OLEDdebug;
+     //OLEDdebug = !OLEDdebug;
+ 
+     wave_index++;
+    //check for overflow
+    if(wave_index > numOfWaves)
+      {
+      wave_index = 0;
+      }
+    switch (wave_index) {
+      case 0:
+        //Serial.println("WAVEFORM_SINE");
+        sine1.begin(WAVEFORM_SINE);
+        sine2.begin(WAVEFORM_SINE);
+        sine3.begin(WAVEFORM_SINE);
+        sine4.begin(WAVEFORM_SINE);
+        sine5.begin(WAVEFORM_SINE);
+        sine6.begin(WAVEFORM_SINE);
+        sine7.begin(WAVEFORM_SINE);
+        sine8.begin(WAVEFORM_SINE);
+        break;
+      case 1:
+        //Serial.println("WAVEFORM_SAWTOOTH");
+        sine1.begin(WAVEFORM_SAWTOOTH);
+        sine2.begin(WAVEFORM_SAWTOOTH);
+        sine3.begin(WAVEFORM_SAWTOOTH);
+        sine4.begin(WAVEFORM_SAWTOOTH);
+        sine5.begin(WAVEFORM_SAWTOOTH);
+        sine6.begin(WAVEFORM_SAWTOOTH);
+        sine7.begin(WAVEFORM_SAWTOOTH);
+        sine8.begin(WAVEFORM_SAWTOOTH);
+        break;
+      case 2:
+        //Serial.println("WAVEFORM_SQUARE");
+        sine1.begin(WAVEFORM_SQUARE);
+        sine2.begin(WAVEFORM_SQUARE);
+        sine3.begin(WAVEFORM_SQUARE);
+        sine4.begin(WAVEFORM_SQUARE);
+        sine5.begin(WAVEFORM_SQUARE);
+        sine6.begin(WAVEFORM_SQUARE);
+        sine7.begin(WAVEFORM_SQUARE);
+        sine8.begin(WAVEFORM_SQUARE);
+        break;
+      case 3:
+        //Serial.println("WAVEFORM_TRIANGLE");
+        sine1.begin(WAVEFORM_TRIANGLE);
+        sine2.begin(WAVEFORM_TRIANGLE);
+        sine3.begin(WAVEFORM_TRIANGLE);
+        sine4.begin(WAVEFORM_TRIANGLE);
+        sine5.begin(WAVEFORM_TRIANGLE);
+        sine6.begin(WAVEFORM_TRIANGLE);
+        sine7.begin(WAVEFORM_TRIANGLE);
+        sine8.begin(WAVEFORM_TRIANGLE);
+        break;
+      case 4:
+        //Serial.println("WAVEFORM_SAMPLE_HOLD");
+        sine1.begin(WAVEFORM_SAMPLE_HOLD);
+        sine2.begin(WAVEFORM_SAMPLE_HOLD);
+        sine3.begin(WAVEFORM_SAMPLE_HOLD);
+        sine4.begin(WAVEFORM_SAMPLE_HOLD);
+        sine5.begin(WAVEFORM_SAMPLE_HOLD);
+        sine6.begin(WAVEFORM_SAMPLE_HOLD);
+        sine7.begin(WAVEFORM_SAMPLE_HOLD);
+        sine8.begin(WAVEFORM_SAMPLE_HOLD);
+        break;
+     }
     }
 
     if (touchReadingLeft > leftThreshold && previousTouchReadingLeft < leftThreshold && millis() - previousTimeLeft > debounce)

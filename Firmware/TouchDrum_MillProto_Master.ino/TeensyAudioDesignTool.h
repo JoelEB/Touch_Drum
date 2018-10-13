@@ -2,16 +2,16 @@
 
 // GUItool: begin automatically generated code
 AudioSynthWaveformDc     dc2;            //xy=189,206
-AudioSynthWaveformSine   sine3;          //xy=189,250
+AudioSynthWaveform   sine3;          //xy=189,250
 AudioSynthWaveformDc     dc6; //xy=188,564
-AudioSynthWaveformSine   sine7; //xy=188,608
-AudioSynthWaveformSine   sine2;          //xy=190,164
-AudioSynthWaveformSine   sine6; //xy=189,522
-AudioSynthWaveformSine   sine1;          //xy=192,78
-AudioSynthWaveformSine   sine4;          //xy=191,334
+AudioSynthWaveform   sine7; //xy=188,608
+AudioSynthWaveform   sine2;          //xy=190,164
+AudioSynthWaveform   sine6; //xy=189,522
+AudioSynthWaveform   sine1;          //xy=192,78
+AudioSynthWaveform   sine4;          //xy=191,334
 AudioSynthWaveformDc     dc1;            //xy=192,120
-AudioSynthWaveformSine   sine5; //xy=191,436
-AudioSynthWaveformSine   sine8; //xy=190,692
+AudioSynthWaveform   sine5; //xy=191,436
+AudioSynthWaveform   sine8; //xy=190,692
 AudioSynthWaveformDc     dc5; //xy=191,478
 AudioSynthWaveformDc     dc4;            //xy=192,378
 AudioSynthWaveformDc     dc8; //xy=191,736
