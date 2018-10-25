@@ -653,8 +653,7 @@ void touchCheck()
     touchReadingLeft = touchRead(buttonLeft);
     touchReadingRight = touchRead(buttonRight);
     
-    if (touchReadingLeft > leftThreshold && previousTouchReadingLeft < leftThreshold && millis() - previousTimeLeft > debounce 
-     && touchReadingRight > rightThreshold && previousTouchReadingRight < rightThreshold  && millis() - previousTimeRight > debounce)
+    if (touchReadingLeft > leftThreshold && touchReadingRight > rightThreshold && previousTouchReadingRight < rightThreshold  && millis() - previousTimeRight < debounce)
     {
      //OLEDdebug = !OLEDdebug;
  
@@ -721,6 +720,14 @@ void touchCheck()
         sine8.begin(WAVEFORM_SAMPLE_HOLD);
         break;
      }
+    }
+
+    if (touchReadingRight > rightThreshold && touchReadingLeft > leftThreshold && previousTouchReadingLeft < leftThreshold  && millis() - previousTimeLeft > debounce)
+    {
+    octave_index++;
+
+    if(octave_index > 2)
+    octave_index = -2;//overflow
     }
 
     if (touchReadingLeft > leftThreshold && previousTouchReadingLeft < leftThreshold && millis() - previousTimeLeft > debounce)
