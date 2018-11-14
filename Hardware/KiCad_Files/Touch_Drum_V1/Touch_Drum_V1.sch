@@ -1117,7 +1117,7 @@ L_OUT
 Wire Wire Line
 	3250 6300 3200 6300
 NoConn ~ 2850 3300
-Text Notes 8500 4500 0    79   ~ 0
+Text Notes 8700 4050 0    79   ~ 0
 OLED SCREEN
 $Comp
 L SparkFun-Connectors:JST_2MM_MALE J?
@@ -1644,4 +1644,15 @@ Wire Wire Line
 	5600 2950 5700 2950
 Wire Wire Line
 	5700 2800 5600 2800
+$Comp
+L Connector_Generic:Conn_01x07 J?
+U 1 1 5BEF7FEE
+P 9850 4500
+F 0 "J?" H 9930 4542 50  0000 L CNN
+F 1 "Conn_01x07" H 9930 4451 50  0000 L CNN
+F 2 "" H 9850 4500 50  0001 C CNN
+F 3 "~" H 9850 4500 50  0001 C CNN
+	1    9850 4500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
