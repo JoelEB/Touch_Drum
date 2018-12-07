@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 0)
+    (drawings 1)
     (tracks 0)
     (zones 0)
     (modules 0)
@@ -99,5 +99,7 @@
     (uvia_dia 0.3)
     (uvia_drill 0.1)
   )
+
+  (gr_circle (center 107.315 101.6) (end 40.64 101.6) (layer Edge.Cuts) (width 0.15))
 
 )

@@ -1,0 +1,600 @@
+EESchema Schematic File Version 4
+LIBS:Touch_Drum_V1_Top-cache
+EELAYER 26 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Touch_Drum"
+Date ""
+Rev "V0.1"
+Comp "Joel_E_B_INC"
+Comment1 "Joel Bartlett"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 4500 4250 0    79   ~ 0
+CAPACITIVE TOUCH PADS
+Text Notes 4700 1950 0    79   ~ 0
+OLED SCREEN
+Text GLabel 4600 4500 0    50   Input ~ 0
+TOUCH_0
+Text GLabel 4600 4650 0    50   Input ~ 0
+TOUCH_1
+Text GLabel 4600 4800 0    50   Input ~ 0
+TOUCH_2
+Text GLabel 4600 4950 0    50   Input ~ 0
+TOUCH_3
+Text GLabel 4600 5100 0    50   Input ~ 0
+TOUCH_4
+Text GLabel 5800 4950 0    50   Input ~ 0
+TOUCH_8
+Text GLabel 5800 5100 0    50   Input ~ 0
+TOUCH_9
+Text GLabel 5800 4500 0    50   Input ~ 0
+TOUCH_5
+Text GLabel 5800 4650 0    50   Input ~ 0
+TOUCH_6
+Text GLabel 5800 4800 0    50   Input ~ 0
+TOUCH_7
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5C2DDD04
+P 4700 4500
+F 0 "TP1" V 4654 4688 50  0000 L CNN
+F 1 "PAD_0" V 4745 4688 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_0.5INCH" H 4900 4500 50  0001 C CNN
+F 3 "~" H 4900 4500 50  0001 C CNN
+	1    4700 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4700 4500 4600 4500
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5C2EF465
+P 4700 4650
+F 0 "TP2" V 4654 4838 50  0000 L CNN
+F 1 "PAD_1" V 4745 4838 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_1.0INCH" H 4900 4650 50  0001 C CNN
+F 3 "~" H 4900 4650 50  0001 C CNN
+	1    4700 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5C2EF4CA
+P 4700 4800
+F 0 "TP3" V 4654 4988 50  0000 L CNN
+F 1 "PAD_2" V 4745 4988 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_1.25INCH" H 4900 4800 50  0001 C CNN
+F 3 "~" H 4900 4800 50  0001 C CNN
+	1    4700 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5C2EF531
+P 4700 4950
+F 0 "TP4" V 4654 5138 50  0000 L CNN
+F 1 "PAD_3" V 4745 5138 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_1.0INCH" H 4900 4950 50  0001 C CNN
+F 3 "~" H 4900 4950 50  0001 C CNN
+	1    4700 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5C2EF59A
+P 4700 5100
+F 0 "TP5" V 4654 5288 50  0000 L CNN
+F 1 "PAD_4" V 4745 5288 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_1.25INCH" H 4900 5100 50  0001 C CNN
+F 3 "~" H 4900 5100 50  0001 C CNN
+	1    4700 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5C2EF747
+P 5900 4500
+F 0 "TP6" V 5854 4688 50  0000 L CNN
+F 1 "PAD_5" V 5945 4688 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_1.25INCH" H 6100 4500 50  0001 C CNN
+F 3 "~" H 6100 4500 50  0001 C CNN
+	1    5900 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5C2EF7C4
+P 5900 4650
+F 0 "TP7" V 5854 4838 50  0000 L CNN
+F 1 "PAD_6" V 5945 4838 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_1.0INCH" H 6100 4650 50  0001 C CNN
+F 3 "~" H 6100 4650 50  0001 C CNN
+	1    5900 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5C2EF833
+P 5900 4800
+F 0 "TP8" V 5854 4988 50  0000 L CNN
+F 1 "PAD_7" V 5945 4988 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_1.25INCH" H 6100 4800 50  0001 C CNN
+F 3 "~" H 6100 4800 50  0001 C CNN
+	1    5900 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5C2EF8A6
+P 5900 4950
+F 0 "TP9" V 5854 5138 50  0000 L CNN
+F 1 "PAD_8" V 5945 5138 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_1.0INCH" H 6100 4950 50  0001 C CNN
+F 3 "~" H 6100 4950 50  0001 C CNN
+	1    5900 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP10
+U 1 1 5C2EF919
+P 5900 5100
+F 0 "TP10" V 5854 5288 50  0000 L CNN
+F 1 "PAD_9" V 5945 5288 50  0000 L CNN
+F 2 "Openponics_Hardware:PAD.LARGE_0.5INCH" H 6100 5100 50  0001 C CNN
+F 3 "~" H 6100 5100 50  0001 C CNN
+	1    5900 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 4650 4700 4650
+Wire Wire Line
+	4700 4800 4600 4800
+Wire Wire Line
+	4600 4950 4700 4950
+Wire Wire Line
+	4700 5100 4600 5100
+Wire Wire Line
+	5800 5100 5900 5100
+Wire Wire Line
+	5900 4950 5800 4950
+Wire Wire Line
+	5800 4800 5900 4800
+Wire Wire Line
+	5800 4650 5900 4650
+Wire Wire Line
+	5900 4500 5800 4500
+$Comp
+L Openponics:TeensyView U1
+U 1 1 5C0D93A8
+P 5150 3200
+F 0 "U1" H 5150 4337 60  0000 C CNN
+F 1 "TeensyView" H 5150 4231 60  0000 C CNN
+F 2 "Openponics_Templates:TeensyView" H 5150 3200 60  0001 C CNN
+F 3 "" H 5150 3200 60  0001 C CNN
+	1    5150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+3V3- #PWR?
+U 1 1 5C0D942A
+P 4500 3400
+AR Path="/569EDAE2/5C0D942A" Ref="#PWR?"  Part="1" 
+AR Path="/5C0D942A" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 4500 3250 50  0001 C CNN
+F 1 "+3V3" H 4500 3540 50  0000 C CNN
+F 2 "" H 4500 3400 50  0000 C CNN
+F 3 "" H 4500 3400 50  0000 C CNN
+	1    4500 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5C0D94D5
+P 5700 3700
+F 0 "#PWR0102" H 5700 3450 50  0001 C CNN
+F 1 "GND" H 5705 3527 50  0000 C CNN
+F 2 "" H 5700 3700 50  0001 C CNN
+F 3 "" H 5700 3700 50  0001 C CNN
+	1    5700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3650 5700 3650
+Wire Wire Line
+	5700 3650 5700 3700
+Wire Wire Line
+	4650 3450 4500 3450
+Wire Wire Line
+	4500 3450 4500 3400
+Wire Wire Line
+	5650 2850 5700 2850
+Text GLabel 5700 2850 2    50   Input ~ 0
+MOSI
+Wire Wire Line
+	5650 3350 5700 3350
+Text GLabel 5700 3350 2    50   Input ~ 0
+RST
+Wire Wire Line
+	4650 3150 4600 3150
+Wire Wire Line
+	4650 3050 4600 3050
+Wire Wire Line
+	4650 2450 4600 2450
+Text GLabel 4600 2450 0    50   Input ~ 0
+SCLK
+Text GLabel 4600 3050 0    50   Input ~ 0
+CS
+Text GLabel 4600 3150 0    50   Input ~ 0
+DC
+$Comp
+L Connector_Generic:Conn_01x10 J2
+U 1 1 5C0F1743
+P 7150 2950
+F 0 "J2" H 7230 2942 50  0000 L CNN
+F 1 "Conn_01x10" H 7230 2851 50  0000 L CNN
+F 2 "Connectors:1X10_SMD_MALE" H 7150 2950 50  0001 C CNN
+F 3 "~" H 7150 2950 50  0001 C CNN
+	1    7150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J1
+U 1 1 5C0F17B6
+P 3150 3050
+F 0 "J1" H 3070 2325 50  0000 C CNN
+F 1 "Conn_01x10" H 3070 2416 50  0000 C CNN
+F 2 "Connectors:1X10_SMD_MALE" H 3150 3050 50  0001 C CNN
+F 3 "~" H 3150 3050 50  0001 C CNN
+	1    3150 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5C0F6D8D
+P 3850 2600
+F 0 "#PWR0103" H 3850 2350 50  0001 C CNN
+F 1 "GND" H 3855 2427 50  0000 C CNN
+F 2 "" H 3850 2600 50  0001 C CNN
+F 3 "" H 3850 2600 50  0001 C CNN
+	1    3850 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2550 3850 2550
+Wire Wire Line
+	3850 2550 3850 2600
+Wire Wire Line
+	3350 2650 3400 2650
+Wire Wire Line
+	3350 2750 3400 2750
+Wire Wire Line
+	3350 2850 3400 2850
+Wire Wire Line
+	3350 2950 3400 2950
+Wire Wire Line
+	3350 3050 3400 3050
+Wire Wire Line
+	3350 3150 3400 3150
+Wire Wire Line
+	3350 3250 3400 3250
+Wire Wire Line
+	3350 3450 3400 3450
+$Comp
+L power:GND #PWR0104
+U 1 1 5C11274D
+P 6900 3500
+F 0 "#PWR0104" H 6900 3250 50  0001 C CNN
+F 1 "GND" H 6905 3327 50  0000 C CNN
+F 2 "" H 6900 3500 50  0001 C CNN
+F 3 "" H 6900 3500 50  0001 C CNN
+	1    6900 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3450 6900 3450
+Wire Wire Line
+	6900 3450 6900 3500
+Wire Wire Line
+	6950 3350 6900 3350
+Wire Wire Line
+	6950 3250 6900 3250
+Wire Wire Line
+	6950 3150 6900 3150
+Wire Wire Line
+	6950 3050 6900 3050
+Wire Wire Line
+	6950 2950 6900 2950
+Wire Wire Line
+	6950 2850 6900 2850
+Wire Wire Line
+	6950 2750 6900 2750
+Wire Wire Line
+	6950 2650 6900 2650
+Wire Wire Line
+	6950 2550 6900 2550
+Text GLabel 3400 2650 2    50   Input ~ 0
+TOUCH_0
+Text GLabel 3400 2750 2    50   Input ~ 0
+SCLK
+Text GLabel 3400 2850 2    50   Input ~ 0
+TOUCH_1
+Text GLabel 3400 2950 2    50   Input ~ 0
+CS
+Text GLabel 3400 3050 2    50   Input ~ 0
+TOUCH_2
+Text GLabel 3400 3150 2    50   Input ~ 0
+DC
+Text GLabel 3400 3250 2    50   Input ~ 0
+TOUCH_3
+$Comp
+L Touch_Drum_V1-rescue:+3V3- #PWR?
+U 1 1 5C136B6F
+P 3900 3300
+AR Path="/569EDAE2/5C136B6F" Ref="#PWR?"  Part="1" 
+AR Path="/5C136B6F" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 3900 3150 50  0001 C CNN
+F 1 "+3V3" H 3900 3440 50  0000 C CNN
+F 2 "" H 3900 3300 50  0000 C CNN
+F 3 "" H 3900 3300 50  0000 C CNN
+	1    3900 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3300 3900 3350
+Wire Wire Line
+	3350 3350 3900 3350
+Text GLabel 3400 3450 2    50   Input ~ 0
+TOUCH_4
+Text GLabel 6900 3350 0    50   Input ~ 0
+TOUCH_9
+Text GLabel 6900 3250 0    50   Input ~ 0
+RST
+Text GLabel 6900 3150 0    50   Input ~ 0
+TOUCH_8
+Text GLabel 6900 3050 0    50   Input ~ 0
+DECAY_KNOB
+Text GLabel 6900 2950 0    50   Input ~ 0
+TOUCH_5
+Text GLabel 6900 2850 0    50   Input ~ 0
+MOSI
+Text GLabel 6900 2750 0    50   Input ~ 0
+TOUCH_6
+Text GLabel 6900 2650 0    50   Input ~ 0
+VOL_KNOB
+Text GLabel 6900 2550 0    50   Input ~ 0
+TOUCH_7
+$Comp
+L power:GND #PWR0106
+U 1 1 5C13E68D
+P 4100 6700
+F 0 "#PWR0106" H 4100 6450 50  0001 C CNN
+F 1 "GND" H 4105 6527 50  0000 C CNN
+F 2 "" H 4100 6700 50  0001 C CNN
+F 3 "" H 4100 6700 50  0001 C CNN
+	1    4100 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+3V3- #PWR?
+U 1 1 5C13E6B4
+P 4700 5750
+AR Path="/569EDAE2/5C13E6B4" Ref="#PWR?"  Part="1" 
+AR Path="/5C13E6B4" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 4700 5600 50  0001 C CNN
+F 1 "+3V3" H 4700 5890 50  0000 C CNN
+F 2 "" H 4700 5750 50  0000 C CNN
+F 3 "" H 4700 5750 50  0000 C CNN
+	1    4700 5750
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 6250 2    50   Input ~ 0
+VOL_KNOB
+Text Notes 4750 5450 0    79   ~ 0
+CONTOL KNOBS
+$Comp
+L SparkFun-Resistors:TRIMPOT-PTH-10MM-KNOB-1_2W-10% VR1
+U 1 1 5C1469BD
+P 4400 6250
+F 0 "VR1" H 4332 6292 45  0000 R CNN
+F 1 "TRIMPOT" H 4332 6208 45  0000 R CNN
+F 2 "Openponics_Templates:Panel_Mount_Potentiometer" V 4250 6250 20  0001 C CNN
+F 3 "" H 4400 6250 60  0001 C CNN
+F 4 "RES-09730" H 4332 6166 60  0001 R CNN "Field4"
+	1    4400 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Jumpers:JUMPER-SMT_3_1-NC JP1
+U 1 1 5C14C367
+P 4400 5850
+F 0 "JP1" V 4630 5850 45  0000 C CNN
+F 1 "JP_3_1-NC" V 4546 5850 45  0000 C CNN
+F 2 "Jumpers:SMT-JUMPER_3_1-NC_TRACE_SILK" H 4400 6100 20  0001 C CNN
+F 3 "" V 4400 5795 60  0001 C CNN
+F 4 "XXX-00000" H 4503 5766 60  0001 L CNN "PROD_ID"
+	1    4400 5850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4700 5750 4700 5850
+Wire Wire Line
+	4700 5850 4600 5850
+$Comp
+L power:GND #PWR0108
+U 1 1 5C1507DD
+P 4100 5900
+F 0 "#PWR0108" H 4100 5650 50  0001 C CNN
+F 1 "GND" H 4105 5727 50  0000 C CNN
+F 2 "" H 4100 5900 50  0001 C CNN
+F 3 "" H 4100 5900 50  0001 C CNN
+	1    4100 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 5900 4100 5850
+Wire Wire Line
+	4100 5850 4200 5850
+$Comp
+L SparkFun-Jumpers:JUMPER-SMT_3_1-NC JP2
+U 1 1 5C15173B
+P 4400 6650
+F 0 "JP2" V 4545 6650 45  0000 C CNN
+F 1 "JP_3_1-NC" V 4629 6650 45  0000 C CNN
+F 2 "Jumpers:SMT-JUMPER_3_1-NC_TRACE_SILK" H 4400 6900 20  0001 C CNN
+F 3 "" V 4400 6595 60  0001 C CNN
+F 4 "XXX-00000" H 4503 6566 60  0001 L CNN "PROD_ID"
+	1    4400 6650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 6250 4650 6250
+Wire Wire Line
+	4400 6050 4400 6000
+Wire Wire Line
+	4400 6500 4400 6450
+Wire Wire Line
+	4100 6700 4100 6650
+Wire Wire Line
+	4100 6650 4200 6650
+$Comp
+L Touch_Drum_V1-rescue:+3V3- #PWR?
+U 1 1 5C157411
+P 4700 6600
+AR Path="/569EDAE2/5C157411" Ref="#PWR?"  Part="1" 
+AR Path="/5C157411" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 4700 6450 50  0001 C CNN
+F 1 "+3V3" H 4700 6740 50  0000 C CNN
+F 2 "" H 4700 6600 50  0000 C CNN
+F 3 "" H 4700 6600 50  0000 C CNN
+	1    4700 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 6650 4700 6650
+Wire Wire Line
+	4700 6650 4700 6600
+Text GLabel 5950 6250 2    50   Input ~ 0
+DECAY_KNOB
+$Comp
+L power:GND #PWR0110
+U 1 1 5C15A779
+P 5350 6700
+F 0 "#PWR0110" H 5350 6450 50  0001 C CNN
+F 1 "GND" H 5355 6527 50  0000 C CNN
+F 2 "" H 5350 6700 50  0001 C CNN
+F 3 "" H 5350 6700 50  0001 C CNN
+	1    5350 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Touch_Drum_V1-rescue:+3V3- #PWR?
+U 1 1 5C15A77F
+P 5950 5750
+AR Path="/569EDAE2/5C15A77F" Ref="#PWR?"  Part="1" 
+AR Path="/5C15A77F" Ref="#PWR0111"  Part="1" 
+F 0 "#PWR0111" H 5950 5600 50  0001 C CNN
+F 1 "+3V3" H 5950 5890 50  0000 C CNN
+F 2 "" H 5950 5750 50  0000 C CNN
+F 3 "" H 5950 5750 50  0000 C CNN
+	1    5950 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Resistors:TRIMPOT-PTH-10MM-KNOB-1_2W-10% VR2
+U 1 1 5C15A787
+P 5650 6250
+F 0 "VR2" H 5582 6292 45  0000 R CNN
+F 1 "TRIMPOT" H 5582 6208 45  0000 R CNN
+F 2 "Openponics_Templates:Panel_Mount_Potentiometer" V 5500 6250 20  0001 C CNN
+F 3 "" H 5650 6250 60  0001 C CNN
+F 4 "RES-09730" H 5582 6166 60  0001 R CNN "Field4"
+	1    5650 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Jumpers:JUMPER-SMT_3_1-NC JP3
+U 1 1 5C15A78F
+P 5650 5850
+F 0 "JP3" V 5880 5850 45  0000 C CNN
+F 1 "JP_3_1-NC" V 5796 5850 45  0000 C CNN
+F 2 "Jumpers:SMT-JUMPER_3_1-NC_TRACE_SILK" H 5650 6100 20  0001 C CNN
+F 3 "" V 5650 5795 60  0001 C CNN
+F 4 "XXX-00000" H 5753 5766 60  0001 L CNN "PROD_ID"
+	1    5650 5850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5950 5750 5950 5850
+Wire Wire Line
+	5950 5850 5850 5850
+$Comp
+L power:GND #PWR0112
+U 1 1 5C15A798
+P 5350 5900
+F 0 "#PWR0112" H 5350 5650 50  0001 C CNN
+F 1 "GND" H 5355 5727 50  0000 C CNN
+F 2 "" H 5350 5900 50  0001 C CNN
+F 3 "" H 5350 5900 50  0001 C CNN
+	1    5350 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 5900 5350 5850
+Wire Wire Line
+	5350 5850 5450 5850
+$Comp
+L SparkFun-Jumpers:JUMPER-SMT_3_1-NC JP4
+U 1 1 5C15A7A1
+P 5650 6650
+F 0 "JP4" V 5795 6650 45  0000 C CNN
+F 1 "JP_3_1-NC" V 5879 6650 45  0000 C CNN
+F 2 "Jumpers:SMT-JUMPER_3_1-NC_TRACE_SILK" H 5650 6900 20  0001 C CNN
+F 3 "" V 5650 6595 60  0001 C CNN
+F 4 "XXX-00000" H 5753 6566 60  0001 L CNN "PROD_ID"
+	1    5650 6650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 6050 5650 6000
+Wire Wire Line
+	5650 6500 5650 6450
+Wire Wire Line
+	5350 6700 5350 6650
+Wire Wire Line
+	5350 6650 5450 6650
+$Comp
+L Touch_Drum_V1-rescue:+3V3- #PWR?
+U 1 1 5C15A7AD
+P 5950 6600
+AR Path="/569EDAE2/5C15A7AD" Ref="#PWR?"  Part="1" 
+AR Path="/5C15A7AD" Ref="#PWR0113"  Part="1" 
+F 0 "#PWR0113" H 5950 6450 50  0001 C CNN
+F 1 "+3V3" H 5950 6740 50  0000 C CNN
+F 2 "" H 5950 6600 50  0000 C CNN
+F 3 "" H 5950 6600 50  0000 C CNN
+	1    5950 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 6650 5950 6650
+Wire Wire Line
+	5950 6650 5950 6600
+Wire Wire Line
+	5850 6250 5950 6250
+$Comp
+L Openponics:LOGO L1
+U 1 1 5C0A71E6
+P 9550 7100
+F 0 "L1" H 9550 6908 60  0001 C CNN
+F 1 "LOGO" H 9550 7292 60  0001 C CNN
+F 2 "Openponics_Logos:TouchDrumLogo" H 9550 7100 50  0001 C CNN
+F 3 "" H 9550 7100 50  0001 C CNN
+	1    9550 7100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
