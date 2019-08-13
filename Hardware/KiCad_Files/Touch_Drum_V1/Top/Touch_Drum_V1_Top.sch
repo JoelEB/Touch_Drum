@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Touch_Drum_V1_Top-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
@@ -180,13 +180,13 @@ F 3 "" H 5150 3200 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Touch_Drum_V1-rescue:+3V3- #PWR?
+L power:+3.3V #PWR?
 U 1 1 5C0D942A
 P 4500 3400
 AR Path="/569EDAE2/5C0D942A" Ref="#PWR?"  Part="1" 
 AR Path="/5C0D942A" Ref="#PWR0101"  Part="1" 
 F 0 "#PWR0101" H 4500 3250 50  0001 C CNN
-F 1 "+3V3" H 4500 3540 50  0000 C CNN
+F 1 "+3.3V" H 4500 3540 50  0000 C CNN
 F 2 "" H 4500 3400 50  0000 C CNN
 F 3 "" H 4500 3400 50  0000 C CNN
 	1    4500 3400
@@ -332,13 +332,13 @@ DC
 Text GLabel 3400 3250 2    50   Input ~ 0
 TOUCH_3
 $Comp
-L Touch_Drum_V1-rescue:+3V3- #PWR?
+L power:+3.3V #PWR?
 U 1 1 5C136B6F
 P 3900 3300
 AR Path="/569EDAE2/5C136B6F" Ref="#PWR?"  Part="1" 
 AR Path="/5C136B6F" Ref="#PWR0105"  Part="1" 
 F 0 "#PWR0105" H 3900 3150 50  0001 C CNN
-F 1 "+3V3" H 3900 3440 50  0000 C CNN
+F 1 "+3.3V" H 3900 3440 50  0000 C CNN
 F 2 "" H 3900 3300 50  0000 C CNN
 F 3 "" H 3900 3300 50  0000 C CNN
 	1    3900 3300
@@ -380,13 +380,13 @@ F 3 "" H 4100 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Touch_Drum_V1-rescue:+3V3- #PWR?
+L power:+3.3V #PWR?
 U 1 1 5C13E6B4
 P 4700 5750
 AR Path="/569EDAE2/5C13E6B4" Ref="#PWR?"  Part="1" 
 AR Path="/5C13E6B4" Ref="#PWR0107"  Part="1" 
 F 0 "#PWR0107" H 4700 5600 50  0001 C CNN
-F 1 "+3V3" H 4700 5890 50  0000 C CNN
+F 1 "+3.3V" H 4700 5890 50  0000 C CNN
 F 2 "" H 4700 5750 50  0000 C CNN
 F 3 "" H 4700 5750 50  0000 C CNN
 	1    4700 5750
@@ -461,19 +461,6 @@ Wire Wire Line
 	4100 6700 4100 6650
 Wire Wire Line
 	4100 6650 4200 6650
-$Comp
-L Touch_Drum_V1-rescue:+3V3- #PWR?
-U 1 1 5C157411
-P 4700 6600
-AR Path="/569EDAE2/5C157411" Ref="#PWR?"  Part="1" 
-AR Path="/5C157411" Ref="#PWR0109"  Part="1" 
-F 0 "#PWR0109" H 4700 6450 50  0001 C CNN
-F 1 "+3V3" H 4700 6740 50  0000 C CNN
-F 2 "" H 4700 6600 50  0000 C CNN
-F 3 "" H 4700 6600 50  0000 C CNN
-	1    4700 6600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4600 6650 4700 6650
 Wire Wire Line
@@ -489,19 +476,6 @@ F 1 "GND" H 5355 6527 50  0000 C CNN
 F 2 "" H 5350 6700 50  0001 C CNN
 F 3 "" H 5350 6700 50  0001 C CNN
 	1    5350 6700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Touch_Drum_V1-rescue:+3V3- #PWR?
-U 1 1 5C15A77F
-P 5950 5750
-AR Path="/569EDAE2/5C15A77F" Ref="#PWR?"  Part="1" 
-AR Path="/5C15A77F" Ref="#PWR0111"  Part="1" 
-F 0 "#PWR0111" H 5950 5600 50  0001 C CNN
-F 1 "+3V3" H 5950 5890 50  0000 C CNN
-F 2 "" H 5950 5750 50  0000 C CNN
-F 3 "" H 5950 5750 50  0000 C CNN
-	1    5950 5750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -567,19 +541,6 @@ Wire Wire Line
 	5350 6700 5350 6650
 Wire Wire Line
 	5350 6650 5450 6650
-$Comp
-L Touch_Drum_V1-rescue:+3V3- #PWR?
-U 1 1 5C15A7AD
-P 5950 6600
-AR Path="/569EDAE2/5C15A7AD" Ref="#PWR?"  Part="1" 
-AR Path="/5C15A7AD" Ref="#PWR0113"  Part="1" 
-F 0 "#PWR0113" H 5950 6450 50  0001 C CNN
-F 1 "+3V3" H 5950 6740 50  0000 C CNN
-F 2 "" H 5950 6600 50  0000 C CNN
-F 3 "" H 5950 6600 50  0000 C CNN
-	1    5950 6600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5850 6650 5950 6650
 Wire Wire Line
@@ -587,7 +548,7 @@ Wire Wire Line
 Wire Wire Line
 	5850 6250 5950 6250
 $Comp
-L Openponics:LOGO L1
+L Openponics:TOUCH_DRUM_LOGO L1
 U 1 1 5C0A71E6
 P 9550 7100
 F 0 "L1" H 9550 6908 60  0001 C CNN
@@ -595,6 +556,45 @@ F 1 "LOGO" H 9550 7292 60  0001 C CNN
 F 2 "Openponics_Logos:TouchDrumLogo" H 9550 7100 50  0001 C CNN
 F 3 "" H 9550 7100 50  0001 C CNN
 	1    9550 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D5F5D7C
+P 4700 6600
+AR Path="/569EDAE2/5D5F5D7C" Ref="#PWR?"  Part="1" 
+AR Path="/5D5F5D7C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4700 6450 50  0001 C CNN
+F 1 "+3.3V" H 4700 6740 50  0000 C CNN
+F 2 "" H 4700 6600 50  0000 C CNN
+F 3 "" H 4700 6600 50  0000 C CNN
+	1    4700 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D5F628A
+P 5950 6600
+AR Path="/569EDAE2/5D5F628A" Ref="#PWR?"  Part="1" 
+AR Path="/5D5F628A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5950 6450 50  0001 C CNN
+F 1 "+3.3V" H 5950 6740 50  0000 C CNN
+F 2 "" H 5950 6600 50  0000 C CNN
+F 3 "" H 5950 6600 50  0000 C CNN
+	1    5950 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D5F6798
+P 5950 5750
+AR Path="/569EDAE2/5D5F6798" Ref="#PWR?"  Part="1" 
+AR Path="/5D5F6798" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5950 5600 50  0001 C CNN
+F 1 "+3.3V" H 5950 5890 50  0000 C CNN
+F 2 "" H 5950 5750 50  0000 C CNN
+F 3 "" H 5950 5750 50  0000 C CNN
+	1    5950 5750
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

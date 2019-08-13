@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name touchDrumLib)(type KiCad)(uri /Users/joelbartlett/Desktop/touchDrumLib.pretty)(options "")(descr ""))
+)
